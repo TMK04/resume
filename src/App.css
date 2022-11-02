@@ -28,7 +28,20 @@
   src: url("fonts/Lato-Italic.ttf");
 }
 
+:root {
+  --pri: #9142ff;
+  --accent: #333333;
+  --secondary: #505050;
+
+  --bg: #ffffff;
+  --light: #606060;
+
+  --text: #2b2b2b;
+}
+
 body {
+  background-color: var(--bg);
+  color: var(--text);
   font-family: Lato;
 }
 
@@ -48,14 +61,12 @@ body {
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
