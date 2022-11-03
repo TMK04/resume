@@ -53,7 +53,8 @@ body {
   margin: 0;
 }
 
-address {
+address,
+ul {
   margin-bottom: 0;
 }
 
