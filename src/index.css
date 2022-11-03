@@ -63,5 +63,5 @@ ul {
 }
 
 .text-accent {
-  color: rgb(var(--accent));
+  color: rgb(var(--accent)) !important;
 }
