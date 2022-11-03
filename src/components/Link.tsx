@@ -1,18 +1,18 @@
-import { formatNonEmptyClassName, formatNonEmptyStr } from "../helpers";
+import { formatNonEmptyClassName } from "../helpers";
 
 import Detail from "./Detail";
 
-type LinkProps = Omit<JSX.IntrinsicElements["a"], "children" | "href"> & {
+import "./Link.css";
+
+type LinkProps = Omit<JSX.IntrinsicElements["a"], "children"> & {
   children: string;
-  href_prefix?: string;
 };
 
-export default function Link({ children, className, href_prefix, ...props }: LinkProps) {
+export default function Link({ children, className, ...props }: LinkProps) {
   return (
     <Detail>
       <a
-        className={`text-decoration-none text-secondary${formatNonEmptyClassName(className)}`}
-        href={`${formatNonEmptyStr(children, (str) => `${str}:`)}${children}`}
+        className={`link text-decoration-none text-secondary${formatNonEmptyClassName(className)}`}
         {...props}
       >
         {children}
