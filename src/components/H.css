@@ -1,15 +1,15 @@
 h1,
 .h1 {
-  margin-bottom: 0.1em;
-  margin-top: 0.1em;
+  margin-bottom: 0.12rem;
+  margin-top: 0.12rem;
 }
 
 h2,
 .h2,
 h3,
 .h3 {
-  margin-bottom: 0.15em;
-  margin-top: 0.15em;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
 }
 
 h4,
@@ -18,31 +18,31 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-bottom: 0.12em;
-  margin-top: 0.12em;
+  margin-bottom: 0.15rem;
+  margin-top: 0.15rem;
 }
 
 h1,
 .h1 {
-  font-size: 3.05em;
+  font-size: 3.05rem;
 }
 
 h2,
 .h2 {
-  font-size: 1.7em;
+  font-size: 1.7rem;
 }
 
 h3,
 .h3 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 h4,
 .h4 {
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 h5,
 .h5 {
-  font-size: 1.05em;
+  font-size: 1.05rem;
 }
