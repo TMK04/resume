@@ -1,0 +1,12 @@
+#top-article,
+#top-aside {
+  flex-basis: 10%;
+}
+
+#top-article {
+  flex-grow: 2;
+}
+
+#top-aside {
+  flex-grow: 1;
+}

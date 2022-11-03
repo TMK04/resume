@@ -18,7 +18,7 @@ export default function BulletList({ className, items, ...props }: BulletListPro
 
   return (
     <ul
-      className={`bullet-list d-flex flex-wrap p-0${formatNonEmptyClassName(className)}`}
+      className={`bullet-list d-flex flex-wrap mb-0 p-0${formatNonEmptyClassName(className)}`}
       {...props}
     >
       {Items}
