@@ -25,7 +25,7 @@ function App() {
       </header>
       <Separator />
       <main className="d-flex flex-column flex-md-row-reverse gap-md-5 mx-5">
-        <article id="top-article">
+        <article className="d-flex flex-column gap-3" id="top-article">
           <Section h2_props={{ children: "Experience" }}>
             <H3>
               <Link href="http://polyfintech100hackathon.sg">PolyFinTech 100 API Hackathon</Link>
@@ -48,7 +48,7 @@ function App() {
             </ul>
           </Section>
         </article>
-        <aside id="top-aside">
+        <aside className="d-flex flex-column gap-3" id="top-aside">
           <Section h2_props={{ children: "Education" }}>
             <H3>Temasek Polytechnic</H3>
             <H4>Diploma in Applied Artficial Intelligence</H4>
