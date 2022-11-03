@@ -11,10 +11,7 @@ type LinkProps = Omit<JSX.IntrinsicElements["a"], "children"> & {
 export default function Link({ children, className, ...props }: LinkProps) {
   return (
     <Detail>
-      <a
-        className={`link text-decoration-none text-secondary${formatNonEmptyClassName(className)}`}
-        {...props}
-      >
+      <a className={`link text-decoration-none${formatNonEmptyClassName(className)}`} {...props}>
         {children}
       </a>
     </Detail>

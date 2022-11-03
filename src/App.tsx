@@ -16,11 +16,17 @@ function App() {
           Tran Minh <strong>Khoa</strong>
         </h1>
         <address>
-          <Link href="mailto:t.m.khoa.2308@gmail.com">t.m.khoa.2308@gmail.com</Link>
+          <Link className="text-secondary" href="mailto:t.m.khoa.2308@gmail.com">
+            t.m.khoa.2308@gmail.com
+          </Link>
           <SeparatorInline className="fw-bold">|</SeparatorInline>
-          <Link href="tel:+6580138550">+65 8013 8550</Link>
+          <Link className="text-secondary" href="tel:+6580138550">
+            +65 8013 8550
+          </Link>
           <div>
-            <Link href="mailto:2101432i@student.tp.edu.sg">2101432i@student.tp.edu.sg</Link>
+            <Link className="text-secondary" href="mailto:2101432i@student.tp.edu.sg">
+              2101432i@student.tp.edu.sg
+            </Link>
           </div>
         </address>
       </header>
@@ -31,7 +37,7 @@ function App() {
             <Subsection
               h3_props={{
                 children: (
-                  <Link href="http://polyfintech100hackathon.sg">
+                  <Link className="text-accent" href="http://polyfintech100hackathon.sg">
                     PolyFinTech 100 API Hackathon
                   </Link>
                 )
@@ -77,7 +83,11 @@ function App() {
             </Subsection>
             <Subsection
               h3_props={{
-                children: <Link href="https://github.com/TMK04/sourcerer">Sourcerer</Link>,
+                children: (
+                  <Link className="text-accent" href="https://github.com/TMK04/sourcerer">
+                    Sourcerer
+                  </Link>
+                ),
                 description: "Research Automation Tool"
               }}
             >
@@ -99,7 +109,7 @@ function App() {
             <Subsection
               h3_props={{
                 children: (
-                  <Link href="https://github.com/TMK04/mldp-project">
+                  <Link className="text-accent" href="https://github.com/TMK04/mldp-project">
                     Data Science Job Salaries Predictor
                   </Link>
                 )
@@ -121,7 +131,11 @@ function App() {
             </Subsection>
             <Subsection
               h3_props={{
-                children: <Link href="https://github.com/TMK04/hauterev">Hauterev</Link>
+                children: (
+                  <Link className="text-accent" href="https://github.com/TMK04/hauterev">
+                    Hauterev
+                  </Link>
+                )
               }}
             >
               <H5>
@@ -177,10 +191,16 @@ function App() {
           <Section className="mb-2" h2_props={{ children: "Links" }}>
             <address>
               <div>
-                GitHub://<Link href="https://github.com/TMK04">TMK04</Link>
+                GitHub://
+                <Link className="text-accent" href="https://github.com/TMK04">
+                  TMK04
+                </Link>
               </div>
               <div>
-                LinkedIn://<Link href="https://www.linkedin.com/in/tmk04">tmk04</Link>
+                LinkedIn://
+                <Link className="text-accent" href="https://www.linkedin.com/in/tmk04">
+                  tmk04
+                </Link>
               </div>
             </address>
           </Section>
