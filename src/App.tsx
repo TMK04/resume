@@ -3,7 +3,7 @@ import { Separator, SeparatorInline } from "./components/Separators";
 
 function App() {
   return (
-    <>
+    <div className="my-3">
       <header className="mx-5 text-center">
         <h1>
           Tran Minh <strong>Khoa</strong>
@@ -18,7 +18,7 @@ function App() {
         </div>
       </header>
       <Separator />
-    </>
+    </div>
   );
 }
 
