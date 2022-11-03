@@ -38,6 +38,10 @@
   --light: 96, 96, 96;
 
   --text: 43, 43, 43;
+
+  --bs-primary-rgb: var(--pri);
+  --bs-secondary-rgb: var(--secondary);
+  --bs-light-rgb: var(--light);
 }
 
 body {
