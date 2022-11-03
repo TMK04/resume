@@ -56,3 +56,7 @@ body {
 .raleway {
   font-family: Raleway;
 }
+
+.text-accent {
+  color: rgb(var(--accent));
+}

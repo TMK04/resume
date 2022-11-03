@@ -4,7 +4,7 @@ import "./Separators.css";
 
 export function Separator({ className, ...props }: JSX.IntrinsicElements["div"]) {
   return (
-    <div className={`bg-primary my-2 separator${formatNonEmptyClassName(className)}`} {...props} />
+    <div className={`bg-primary my-3 separator${formatNonEmptyClassName(className)}`} {...props} />
   );
 }
 
