@@ -1,4 +1,3 @@
-import "./App.css";
 import Link from "./components/Link";
 import { Separator, SeparatorInline } from "./components/Separators";
 
