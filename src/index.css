@@ -53,6 +53,10 @@ body {
   margin: 0;
 }
 
+address {
+  margin-bottom: 0;
+}
+
 .raleway {
   font-family: Raleway;
 }
