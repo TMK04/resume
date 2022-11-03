@@ -21,13 +21,15 @@ function App() {
         </div>
       </header>
       <Separator />
-      <Section h2_props={{ children: "Education" }}>
-        <H3>Temasek Polytechnic</H3>
-        <H4>Diploma in Applied Artficial Intelligence</H4>
-        <Time>Grad. April 2023 (expected)</Time>
-        School of Informatics & Information Technology
-        <H5 className="text-accent">Cum. GPA: 3.86 / 4.0</H5>
-      </Section>
+      <main className="mx-5">
+        <Section h2_props={{ children: "Education" }}>
+          <H3>Temasek Polytechnic</H3>
+          <H4>Diploma in Applied Artficial Intelligence</H4>
+          <Time>Grad. April 2023 (expected)</Time>
+          School of Informatics & Information Technology
+          <H5 className="text-accent">Cum. GPA: 3.86 / 4.0</H5>
+        </Section>
+      </main>
     </div>
   );
 }
