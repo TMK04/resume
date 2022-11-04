@@ -55,7 +55,7 @@ export default function ExperienceSection() {
             Automated <em>Keyword Extraction</em> & <em>Outsourcing of References</em>
           </>,
           <>
-            Shortened research time from <em>several minutes</em>
+            Shortened time taken to gather resources from <em>several minutes</em>
             {" to "}
             <strong>30 seconds</strong>
           </>
