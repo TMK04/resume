@@ -1,6 +1,6 @@
 import Link from "../../components/Link";
 import { Section } from "../../components/Section";
-import Skill, { FrameworkLink, SkillLink } from "../SkillsSection/Skill";
+import { FrameworkLink, SkillLink } from "../SkillsSection/Skill";
 
 import Experience from "./Experience";
 
