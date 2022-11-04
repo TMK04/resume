@@ -5,6 +5,7 @@ import EducationSection from "./sections/EducationSection";
 import ExperienceSection from "./sections/ExperienceSection";
 import LinksSection from "./sections/LinksSection";
 import LnASection from "./sections/LnASection";
+import ReferencesSection from "./sections/ReferencesSection";
 import SkillsSection from "./sections/SkillsSection";
 
 import "./App.css";
@@ -43,6 +44,10 @@ function App() {
           <SkillsSection />
         </aside>
       </main>
+      <Separator />
+      <footer className="mx-5">
+        <ReferencesSection />
+      </footer>
     </div>
   );
 }
