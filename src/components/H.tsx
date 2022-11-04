@@ -12,10 +12,7 @@ export function H2({ children, className, ...props }: JSX.IntrinsicElements["h2"
 
 export function H3({ children, className, ...props }: JSX.IntrinsicElements["h3"]) {
   return (
-    <h3
-      className={`fw-bold text-accent text-uppercase${formatNonEmptyClassName(className)}`}
-      {...props}
-    >
+    <h3 className={`text-accent text-uppercase${formatNonEmptyClassName(className)}`} {...props}>
       {children}
     </h3>
   );
