@@ -8,18 +8,12 @@ import Skill from "./Skill";
 export default function SkillsSection() {
   return (
     <Section h2_props={{ children: "Skills" }}>
-      <Subsection h3_props={{ children: "Coursework" }}>
+      <Subsection h3_props={{ children: "Competencies" }}>
         <div>Data Science & Machine Learning</div>
         <div>Robotics Process Automation</div>
-        <div>Cloud Technologies (AWS)</div>
-        <div>Fullstack Website Development</div>
-        <div>Security Essentials</div>
-        <div>Mobile App Development</div>
-        <div>UI & UX</div>
-        <div>Network Technology</div>
-        <div>Communication</div>
+        <div>Cloud Technologies</div>
       </Subsection>
-      <Subsection h3_props={{ children: "Programming" }}>
+      <Subsection h3_props={{ children: "Languages & Tools" }}>
         <H5>Over 5000 lines:</H5>
         <BulletList
           items={[
@@ -53,7 +47,9 @@ export default function SkillsSection() {
         <BulletList
           items={[<Skill skill="Solidity" />, <Skill skill="GraphQL" />, <Skill skill="Kotlin" />]}
         />
-        <H5>WPM: 91</H5>
+        <H5>
+          WPM: <NormalInline>91</NormalInline>
+        </H5>
       </Subsection>
       <Subsection h3_props={{ children: "Soft Skills" }}>
         <H5>
