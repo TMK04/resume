@@ -1,3 +1,4 @@
+import Link from "../../components/Link";
 import { formatNonEmptyStr } from "../../helpers";
 
 import untyped_skills from "./skills.json";
@@ -26,5 +27,25 @@ export default function Skill({ skill }: SkillProps) {
       short,
       (short) => ` ${wrap(short)}`
     )}`}</span>
+  );
+}
+
+export function SkillLink({ skill }: SkillProps) {
+  const { color, short } = skills[skill];
+  return (
+    <Link href={`#${skillId(skill)}`} style={{ color }}>
+      {short ? wrap(short) : skill}
+    </Link>
+  );
+}
+
+export function FrameworkLink({
+  framework,
+  frameworkable
+}: Record<"framework" | "frameworkable", SkillKey>) {
+  return (
+    <span>
+      <SkillLink skill={framework} /> <SkillLink skill={frameworkable} />
+    </span>
   );
 }

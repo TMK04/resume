@@ -1,5 +1,6 @@
 import Link from "../../components/Link";
 import { Section } from "../../components/Section";
+import Skill, { FrameworkLink, SkillLink } from "../SkillsSection/Skill";
 
 import Experience from "./Experience";
 
@@ -14,7 +15,12 @@ export default function ExperienceSection() {
             </Link>
           )
         }}
-        skills={["React (TS)", "React Native (TS)", "CSS", "Solidity"]}
+        skills={[
+          <FrameworkLink framework="React" frameworkable="TypeScript" />,
+          <FrameworkLink framework="React Native" frameworkable="TypeScript" />,
+          <SkillLink skill="CSS" />,
+          <SkillLink skill="Solidity" />
+        ]}
         time_props={{ children: "April 2022 - November 2022" }}
         actions={[
           <>
@@ -32,7 +38,10 @@ export default function ExperienceSection() {
           children: "Papa Yu's",
           description: "Recipes Website"
         }}
-        skills={["React (TS)", "CSS"]}
+        skills={[
+          <FrameworkLink framework="React" frameworkable="TypeScript" />,
+          <SkillLink skill="CSS" />
+        ]}
         time_props={{ children: "April 2022 - August 2022" }}
         actions={[
           <>Set up Elastic Beanstalk, Lambda, S3, & other services on AWS Cloud</>,
@@ -48,7 +57,7 @@ export default function ExperienceSection() {
           ),
           description: "Research Automation Tool"
         }}
-        skills={["UiPath"]}
+        skills={[<SkillLink skill="UiPath" />]}
         time_props={{ children: "April 2022 - August 2022" }}
         actions={[
           <>
@@ -69,7 +78,12 @@ export default function ExperienceSection() {
             </Link>
           )
         }}
-        skills={["Python Notebooks", "HTML"]}
+        skills={[
+          <span>
+            <SkillLink skill="Python" /> Notebooks
+          </span>,
+          <SkillLink skill="HTML" />
+        ]}
         time_props={{ children: "May 2022 - August 2022" }}
         actions={[
           <>
@@ -89,7 +103,11 @@ export default function ExperienceSection() {
             </Link>
           )
         }}
-        skills={["Web Components (TS)", "CSS", "MySQL"]}
+        skills={[
+          <FrameworkLink framework="Web Components" frameworkable="TypeScript" />,
+          <SkillLink skill="CSS" />,
+          <SkillLink skill="MySQL" />
+        ]}
         time_props={{ children: "October 2021 - February 2022" }}
         actions={[
           <>Incorporated Fulltext search with filters</>,
