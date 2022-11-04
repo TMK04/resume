@@ -42,6 +42,7 @@
   --bs-primary-rgb: var(--pri);
   --bs-secondary-rgb: var(--secondary);
   --bs-light-rgb: var(--light);
+  --bs-black-rgb: var(--text);
 }
 
 body {
