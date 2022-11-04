@@ -1,7 +1,6 @@
 import Detail from "./components/Detail";
 import Link from "./components/Link";
 import { Separator, SeparatorInline } from "./components/Separators";
-import CourseworkSection from "./sections/CourseworkSection";
 import EducationSection from "./sections/EducationSection";
 import ExperienceSection from "./sections/ExperienceSection";
 import LinksSection from "./sections/LinksSection";
@@ -41,7 +40,6 @@ function App() {
         <aside className="d-flex flex-column gap-3" id="top-aside">
           <EducationSection />
           <LinksSection />
-          <CourseworkSection />
           <SkillsSection />
         </aside>
       </main>

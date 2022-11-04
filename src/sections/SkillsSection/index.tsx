@@ -6,6 +6,17 @@ import { Section, Subsection } from "../../components/Section";
 export default function SkillsSection() {
   return (
     <Section h2_props={{ children: "Skills" }}>
+      <Subsection h3_props={{ children: "Coursework" }}>
+        <div>Data Science & Machine Learning</div>
+        <div>Robotics Process Automation</div>
+        <div>Cloud Technologies (AWS)</div>
+        <div>Fullstack Website Development</div>
+        <div>Security Essentials</div>
+        <div>Mobile App Development</div>
+        <div>UI & UX</div>
+        <div>Network Technology</div>
+        <div>Communication</div>
+      </Subsection>
       <Subsection h3_props={{ children: "Programming" }}>
         <H5>Over 5000 lines:</H5>
         <BulletList
