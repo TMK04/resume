@@ -1,0 +1,20 @@
+{
+  "Adobe XD": {},
+  "CSS": { "color": "#1a2133" },
+  "Git": {},
+  "GraphQL": { "color": "#331a2b" },
+  "HTML": { "color": "#33201a" },
+  "Java": {},
+  "JavaScript": { "color": "#33301a", "short": "JS" },
+  "Kotlin": {},
+  "Markdown": {},
+  "MySQL": { "color": "#2f331f" },
+  "Python": { "color": "#2f3327" },
+  "React Native": { "color": "#2f3327" },
+  "React": { "color": "#1a2d33" },
+  "Solidity": { "color": "#333333" },
+  "TypeScript": { "color": "#1a2533", "short": "TS" },
+  "UiPath": { "color": "#331f1a" },
+  "Web Components": { "color": "#1a332a" },
+  "XML": {}
+}
