@@ -11,6 +11,11 @@ export default function EducationSection() {
         School of Informatics & Information Technology
         <H5 className="text-accent">Cum. GPA: 3.86 / 4.0</H5>
       </Subsection>
+      <Subsection h3_props={{ children: "Dunman Secondary School" }}>
+        <H4>GCE 'O' Level Certificate</H4>
+        <Time>Grad. April 2020</Time>
+        <H5 className="text-accent">L1R5: 12</H5>
+      </Subsection>
     </Section>
   );
 }
