@@ -27,6 +27,18 @@
   font-style: italic;
   src: url("fonts/Lato-Italic.ttf");
 }
+@font-face {
+  font-family: Lato;
+  font-weight: 800;
+  font-style: normal;
+  src: url("fonts/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: Lato;
+  font-weight: 800;
+  font-style: italic;
+  src: url("fonts/Lato-BoldItalic.ttf");
+}
 
 :root {
   --pri: 145, 66, 255;
