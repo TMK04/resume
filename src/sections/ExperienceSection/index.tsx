@@ -91,7 +91,18 @@ export default function ExperienceSection() {
         }}
         skills={["Web Components (TS)", "CSS", "MySQL", "Git"]}
         time_props={{ children: "October 2021 - February 2022" }}
-        actions={[<>Incorporated Fulltext search with filters</>]}
+        actions={[
+          <>Incorporated Fulltext search with filters</>,
+          <>
+            {"Followed "}
+            <Link
+              className="text-black"
+              href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"
+            >
+              Responsive Design
+            </Link>
+          </>
+        ]}
       />
     </Section>
   );
