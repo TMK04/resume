@@ -1,3 +1,4 @@
+import Detail from "../../components/Detail";
 import Link from "../../components/Link";
 import { Section } from "../../components/Section";
 
@@ -7,14 +8,14 @@ export default function LinksSection() {
       <address>
         <div>
           GitHub://
-          <Link className="text-accent" href="https://github.com/TMK04">
-            TMK04
+          <Link className="fw-bold text-accent" href="https://github.com/TMK04">
+            <Detail>TMK04</Detail>
           </Link>
         </div>
         <div>
           LinkedIn://
-          <Link className="text-accent" href="https://www.linkedin.com/in/tmk04">
-            tmk04
+          <Link className="fw-bold text-accent" href="https://www.linkedin.com/in/tmk04">
+            <Detail>tmk04</Detail>
           </Link>
         </div>
       </address>

@@ -1,3 +1,4 @@
+import Detail from "./components/Detail";
 import Link from "./components/Link";
 import { Separator, SeparatorInline } from "./components/Separators";
 import CourseworkSection from "./sections/CourseworkSection";
@@ -18,15 +19,15 @@ function App() {
         </h1>
         <address>
           <Link className="text-secondary" href="mailto:t.m.khoa.2308@gmail.com">
-            t.m.khoa.2308@gmail.com
+            <Detail>t.m.khoa.2308@gmail.com</Detail>
           </Link>
           <SeparatorInline className="fw-bold">|</SeparatorInline>
           <Link className="text-secondary" href="tel:+6580138550">
-            +65 8013 8550
+            <Detail>+65 8013 8550</Detail>
           </Link>
           <div>
             <Link className="text-secondary" href="mailto:2101432i@student.tp.edu.sg">
-              2101432i@student.tp.edu.sg
+              <Detail>2101432i@student.tp.edu.sg</Detail>
             </Link>
           </div>
         </address>
