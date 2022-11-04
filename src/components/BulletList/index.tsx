@@ -4,7 +4,7 @@ import { SeparatorInline } from "../Separators";
 import BulletListItem from "./Item";
 
 type BulletListProps = Omit<JSX.IntrinsicElements["ul"], "children"> & {
-  items: JSX.Element[];
+  items: ChildrenProp[];
 };
 
 export default function BulletList({ className, items, ...props }: BulletListProps) {
