@@ -54,44 +54,35 @@ export default function SkillsSection() {
       <Subsection h3_props={{ children: "Soft Skills" }}>
         <H5>
           Adaptibility:
-          <NormalInline>
-            {" "}
-            I am <strong>open-minded</strong> & <strong>calm under pressure</strong>.
-          </NormalInline>
+          <NormalInline> Open-minded & Calm under pressure</NormalInline>
         </H5>
         <H5>
           Never-ending Curiosity:
           <NormalInline>
-            {" I will "}
-            <strong>question</strong>
-            {". I will "}
-            <strong>research</strong>
-            {". I will "}
-            <em>find out</em>.
+            {" Willing to "}learn{", Loves asking questions, & Enjoys doing research"}
           </NormalInline>
         </H5>
         <H5>
           High Achiever:
           <NormalInline>
-            {" I go the extra mile to deliver "}
+            {" Goes the extra mile to deliver "}
             <em>exceptional</em>
-            {" results."}
-          </NormalInline>
-        </H5>
-        <H5>
-          Prosocial:
-          <NormalInline>
-            {" I enjoy "}
-            <strong>working with others</strong>
-            {" and bringing the the best out of everyone's ideas."}
+            {" results"}
           </NormalInline>
         </H5>
         <H5>
           Systematic:
           <NormalInline>
-            {" I use "}
-            <strong>frameworks</strong>
-            {" to plan, execute, & explain my work."}
+            {" Utilizes "}
+            <em>frameworks</em>
+            {" to plan, execute, & explain work"}
+          </NormalInline>
+        </H5>
+        <H5>
+          Team Player:
+          <NormalInline>
+            {" Upholds "}
+            <em>team spirit</em> & values collective innovation
           </NormalInline>
         </H5>
       </Subsection>
