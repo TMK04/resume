@@ -24,8 +24,23 @@ export default function ExperienceSection() {
         time_props={{ children: "April 2022 - November 2022" }}
         actions={[
           <>
-            Created & deployed a <b>Web3-powered</b> ecosystem featuring an E-commerce Website & a
-            Walk-for-rewards App
+            Created & deployed a <b>Web3-powered</b> ecosystem featuring:
+            <ol>
+              <li>An E-commerce Website</li>
+              <li>Walk-for-rewards App</li>
+              <li>Various Smart Contracts</li>
+            </ol>
+          </>,
+          <>
+            Partnered with{" "}
+            <Link
+              className="fw-bold"
+              href="https://www.klaytn.foundation"
+              style={{ color: "#33201A" }}
+            >
+              Klaytn
+            </Link>{" "}
+            & deployed on their <em>Blockchain</em>
           </>,
           <>
             Worked in a <b>team of 6</b> using Git, Discord, & Remnote to organize code,
