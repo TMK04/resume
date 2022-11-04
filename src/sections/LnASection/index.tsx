@@ -18,6 +18,15 @@ export default function LnASection() {
             </td>
           </tr>
           <tr>
+            <th>2021</th>
+            <td>Participation Award</td>
+            <td>
+              DSTA Brainhack 2021
+              <br />
+              Activity: Today I Learned – AI Camp
+            </td>
+          </tr>
+          <tr>
             <th>2020</th>
             <td>
               Section Leader &<br />
