@@ -38,6 +38,7 @@ function App() {
           <ExperienceSection />
           <LnASection />
         </article>
+        <br className="d-none d-print-block" />
         <aside className="d-flex flex-column gap-3" id="top-aside">
           <EducationSection />
           <LinksSection />

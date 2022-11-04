@@ -57,6 +57,12 @@
   --bs-black-rgb: var(--text);
 }
 
+@media print {
+  :root {
+    font-size: 13px;
+  }
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
