@@ -1,5 +1,3 @@
-import type { PropsWithChildren } from "react";
-
 import { formatNonEmptyClassName } from "../helpers";
 
 import { H2, H3, H4 } from "./H";
@@ -21,9 +19,9 @@ export function Section({
   );
 }
 
-type SubsectionProps = JSX.IntrinsicElements["section"] & {
+export type SubsectionProps = JSX.IntrinsicElements["section"] & {
   h3_props: JSX.IntrinsicElements["h3"] & {
-    description?: PropsWithChildren["children"];
+    description?: ChildrenProp;
   };
 };
 
