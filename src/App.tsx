@@ -1,5 +1,7 @@
 import Detail from "./components/Detail";
+import { H5 } from "./components/H";
 import Link from "./components/Link";
+import { NormalInline } from "./components/Normal";
 import { Separator, SeparatorInline } from "./components/Separators";
 import EducationSection from "./sections/EducationSection";
 import ExperienceSection from "./sections/ExperienceSection";
@@ -26,9 +28,14 @@ function App() {
             <Detail>+65 8013 8550</Detail>
           </Link>
           <div>
-            <Link className="text-secondary" href="mailto:2101432i@student.tp.edu.sg">
-              <Detail>2101432i@student.tp.edu.sg</Detail>
-            </Link>
+            <H5>
+              {"Digital Resume: "}
+              <NormalInline>
+                <Link href="https://tmk04-resume.s3.ap-southeast-1.amazonaws.com/index.html">
+                  tmk04-resume
+                </Link>
+              </NormalInline>
+            </H5>
           </div>
         </address>
       </header>
