@@ -14,7 +14,7 @@ export default function ExperienceSection() {
             </Link>
           )
         }}
-        skills={["React (TS)", "React Native (TS)", "CSS", "Solidity", "Git"]}
+        skills={["React (TS)", "React Native (TS)", "CSS", "Solidity"]}
         time_props={{ children: "April 2022 - November 2022" }}
         actions={[
           <>
@@ -32,7 +32,7 @@ export default function ExperienceSection() {
           children: "Papa Yu's",
           description: "Recipes Website"
         }}
-        skills={["React (TS)", "CSS", "Git"]}
+        skills={["React (TS)", "CSS"]}
         time_props={{ children: "April 2022 - August 2022" }}
         actions={[
           <>Set up Elastic Beanstalk, Lambda, S3, & other services on AWS Cloud</>,
@@ -48,7 +48,7 @@ export default function ExperienceSection() {
           ),
           description: "Research Automation Tool"
         }}
-        skills={["UiPath", "Git"]}
+        skills={["UiPath"]}
         time_props={{ children: "April 2022 - August 2022" }}
         actions={[
           <>
@@ -69,7 +69,7 @@ export default function ExperienceSection() {
             </Link>
           )
         }}
-        skills={["Python Notebooks", "HTML", "Git"]}
+        skills={["Python Notebooks", "HTML"]}
         time_props={{ children: "May 2022 - August 2022" }}
         actions={[
           <>
@@ -89,7 +89,7 @@ export default function ExperienceSection() {
             </Link>
           )
         }}
-        skills={["Web Components (TS)", "CSS", "MySQL", "Git"]}
+        skills={["Web Components (TS)", "CSS", "MySQL"]}
         time_props={{ children: "October 2021 - February 2022" }}
         actions={[
           <>Incorporated Fulltext search with filters</>,
