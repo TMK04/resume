@@ -17,9 +17,7 @@ export default function ExperienceSection() {
         }}
       >
         <H5>
-          <BulletList
-            items={[<>React (TS)</>, <>React Native (TS)</>, <>CSS</>, <>Solidity</>, <>Git</>]}
-          />
+          <BulletList items={["React (TS)", "React Native (TS)", "CSS", "Solidity", "Git"]} />
         </H5>
         <Time>April 2022 - November 2022</Time>
         <ul>
@@ -40,7 +38,7 @@ export default function ExperienceSection() {
         }}
       >
         <H5>
-          <BulletList items={[<>React (TS)</>, <>CSS</>, <>Git</>]} />
+          <BulletList items={["React (TS)", "CSS", "Git"]} />
         </H5>
         <Time>April 2022 - August 2022</Time>
         <ul>
@@ -59,7 +57,7 @@ export default function ExperienceSection() {
         }}
       >
         <H5>
-          <BulletList items={[<>UiPath</>, <>Git</>]} />
+          <BulletList items={["UiPath", "Git"]} />
         </H5>
         <Time>April 2022 - August 2022</Time>
         <ul>
@@ -83,7 +81,7 @@ export default function ExperienceSection() {
         }}
       >
         <H5>
-          <BulletList items={[<>Python Notebooks</>, <>HTML</>, <>Git</>]} />
+          <BulletList items={["Python Notebooks", "HTML", "Git"]} />
         </H5>
         <Time>May 2022 - August 2022</Time>
         <ul>
@@ -106,7 +104,7 @@ export default function ExperienceSection() {
         }}
       >
         <H5>
-          <BulletList items={[<>Web Components (TS)</>, <>CSS</>, <>MySQL</>, <>Git</>]} />
+          <BulletList items={["Web Components (TS)", "CSS", "MySQL", "Git"]} />
         </H5>
         <Time>October 2021 - February 2022</Time>
         <ul>

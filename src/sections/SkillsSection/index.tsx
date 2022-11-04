@@ -6,37 +6,30 @@ import { Section, Subsection } from "../../components/Section";
 export default function SkillsSection() {
   return (
     <Section h2_props={{ children: "Skills" }}>
-      <Subsection h3_props={{ children: <>Programming</> }}>
+      <Subsection h3_props={{ children: "Programming" }}>
         <H5>Over 5000 lines:</H5>
         <BulletList
-          items={[
-            <>TypeScript (TS)</>,
-            <>JavaScript (JS)</>,
-            <>React</>,
-            <>HTML</>,
-            <>CSS</>,
-            <i>Git</i>
-          ]}
+          items={["TypeScript (TS)", "JavaScript (JS)", "React", "HTML", "CSS", <i>Git</i>]}
         />
         <H5>Over 1000 lines:</H5>
         <BulletList
           items={[
-            <>Python</>,
-            <>Markdown</>,
-            <>React Native</>,
-            <>Web Components</>,
-            <>UiPath</>,
-            <>MySQL</>,
-            <>Java</>,
-            <>XML</>,
+            "Python",
+            "Markdown",
+            "React Native",
+            "Web Components",
+            "UiPath",
+            "MySQL",
+            "Java",
+            "XML",
             <i>Adobe XD</i>
           ]}
         />
         <H5>Familiar:</H5>
-        <BulletList items={[<>Solidity</>, <>GraphQL</>, <>Kotlin</>]} />
+        <BulletList items={["Solidity", "GraphQL", "Kotlin"]} />
         <H5>WPM: 91</H5>
       </Subsection>
-      <Subsection h3_props={{ children: <>Soft Skills</> }}>
+      <Subsection h3_props={{ children: "Soft Skills" }}>
         <H5>
           Adaptibility:
           <NormalInline>

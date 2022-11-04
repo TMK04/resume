@@ -6,7 +6,7 @@ export default function CourseworkSection() {
   return (
     <Section h2_props={{ children: "Coursework" }}>
       <Courses
-        h3_props={{ children: <>Undergraduate</> }}
+        h3_props={{ children: "Undergraduate" }}
         courses={[
           "Data Science & Machine Learning",
           "Robotics Process Automation",

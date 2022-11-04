@@ -5,7 +5,7 @@ import Time from "../../components/Time";
 export default function EducationSection() {
   return (
     <Section h2_props={{ children: "Education" }}>
-      <Subsection h3_props={{ children: <>Temasek Polytechnic</> }}>
+      <Subsection h3_props={{ children: "Temasek Polytechnic" }}>
         <H4>Diploma in Applied Artficial Intelligence</H4>
         <Time>Grad. April 2023 (expected)</Time>
         School of Informatics & Information Technology
