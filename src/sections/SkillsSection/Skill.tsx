@@ -36,13 +36,14 @@ export default function Skill({ className, skill, ...props }: SkillProps) {
   const initial_style: CSSProperties = {
     backgroundColor: "transparent",
     color: skill_color,
-    fontWeight: "normal"
+    fontWeight: "normal",
+    padding: 0
   };
   const [style, setStyle] = useState(initial_style);
 
   return (
     <button
-      className={`border-0 cursor-default p-0 skill${formatNonEmptyClassName(className)}`}
+      className={`border-0 cursor-default rounded-1 skill${formatNonEmptyClassName(className)}`}
       id={skillId(skill)}
       onBlur={() => {
         setStyle(initial_style);
@@ -51,7 +52,8 @@ export default function Skill({ className, skill, ...props }: SkillProps) {
         setStyle({
           backgroundColor: skill_color,
           color: "white",
-          fontWeight: "bold"
+          fontWeight: "bold",
+          padding: "0 0.18rem"
         });
       }}
       style={style}
