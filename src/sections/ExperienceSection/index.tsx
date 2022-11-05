@@ -60,8 +60,8 @@ export default function ExperienceSection() {
         time_props={{ children: "April 2022 - August 2022" }}
         actions={[
           <>
-            Set up Elastic Beanstalk, Lambda, S3, & other services on AWS{" "}
-            <SkillLink skill="Cloud Technologies" />
+            {"Set up Elastic Beanstalk, Lambda, S3, & other services on "}
+            <SkillLink format={() => "AWS Cloud"} skill="Cloud Technologies" />
           </>,
           <>Incorporated both Fulltext & Tag-based search</>
         ]}
