@@ -5,6 +5,8 @@ import { Section, Subsection } from "../../components/Section";
 
 import Skill from "./Skill";
 
+import "./index.css";
+
 export default function SkillsSection() {
   return (
     <Section h2_props={{ children: "Skills" }}>
@@ -14,7 +16,7 @@ export default function SkillsSection() {
         <Skill className="d-block" skill="Cloud Technologies" />
       </Subsection>
       <Subsection h3_props={{ children: "Languages & Tools" }}>
-        <H5>Over 5000 lines:</H5>
+        <H5 id="skills-lnt-5000">Over 5000 lines:</H5>
         <BulletList
           items={[
             <Skill skill="TypeScript" />,
@@ -27,7 +29,7 @@ export default function SkillsSection() {
             </i>
           ]}
         />
-        <H5>Over 1000 lines:</H5>
+        <H5 id="skills-lnt-1000">Over 1000 lines:</H5>
         <BulletList
           items={[
             <Skill skill="Python" />,
@@ -43,7 +45,7 @@ export default function SkillsSection() {
             </i>
           ]}
         />
-        <H5>Familiar:</H5>
+        <H5 id="skills-lnt-familiar">Familiar:</H5>
         <BulletList
           items={[<Skill skill="Solidity" />, <Skill skill="GraphQL" />, <Skill skill="Kotlin" />]}
         />
