@@ -44,7 +44,7 @@
   --pri: 145, 66, 255;
   --accent: 51, 51, 51;
   --secondary: 80, 80, 80;
-  --highlight: 238, 230, 0;
+  --info: 238, 230, 0;
 
   --bg: 255, 255, 255;
   --dark: 34, 20, 51;
@@ -53,6 +53,7 @@
   --text: 43, 43, 43;
 
   --bs-primary-rgb: var(--pri);
+  --bs-info-rgb: var(--info);
   --bs-secondary-rgb: var(--secondary);
   --bs-dark-rgb: var(--dark);
   --bs-light-rgb: var(--light);
@@ -83,10 +84,6 @@ ul {
   background-color: rgb(var(--accent)) !important;
 }
 
-.bg-highlight {
-  background-color: rgb(var(--highlight)) !important;
-}
-
 .cursor-default {
   cursor: default !important;
 }
@@ -103,8 +100,8 @@ ul {
   color: rgb(var(--accent)) !important;
 }
 
-.text-highlight {
-  color: rgb(var(--highlight)) !important;
+.text-info {
+  color: rgb(var(--info)) !important;
 }
 
 .text-gradient {

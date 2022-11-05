@@ -17,7 +17,7 @@ export default function Tooltip({
         className
       )}`}
       onMouseOut={() => setClassName(TOOLTIP_INITIAL_CLASS_NAME)}
-      onMouseOver={() => setClassName("bg-highlight text-accent")}
+      onMouseOver={() => setClassName("bg-info text-accent")}
       {...props}
     />
   );
