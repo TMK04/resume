@@ -116,7 +116,8 @@ export default function ExperienceSection() {
             <Link className="text-accent" href="https://github.com/TMK04/hauterev">
               Hauterev
             </Link>
-          )
+          ),
+          description: "Restaurant Review Website"
         }}
         skills={[
           <FrameworkLink framework="Web Components" frameworkable="TypeScript" />,
@@ -134,6 +135,7 @@ export default function ExperienceSection() {
             >
               Responsive Design
             </Link>
+            {" to make website viewable on mobile"}
           </>
         ]}
       />
