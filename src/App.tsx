@@ -2,6 +2,7 @@ import Detail from "./components/Detail";
 import { H5 } from "./components/H";
 import Link from "./components/Link";
 import { NormalInline } from "./components/Normal";
+import PrintSwitch from "./components/PrintSwitch";
 import { Separator, SeparatorInline } from "./components/Separators";
 import EducationSection from "./sections/EducationSection";
 import ExperienceSection from "./sections/ExperienceSection";
@@ -32,7 +33,12 @@ function App() {
               {"Digital Resume: "}
               <NormalInline>
                 <Link href="https://tmk04-resume.s3.ap-southeast-1.amazonaws.com/index.html">
-                  tmk04-resume
+                  <PrintSwitch
+                    normal={{ children: "tmk04-resume" }}
+                    print={{
+                      children: "https://tmk04-resume.s3.ap-southeast-1.amazonaws.com/index.html"
+                    }}
+                  />
                 </Link>
               </NormalInline>
             </H5>
