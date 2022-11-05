@@ -59,7 +59,10 @@ export default function ExperienceSection() {
         ]}
         time_props={{ children: "April 2022 - August 2022" }}
         actions={[
-          <>Set up Elastic Beanstalk, Lambda, S3, & other services on AWS Cloud</>,
+          <>
+            Set up Elastic Beanstalk, Lambda, S3, & other services on AWS{" "}
+            <SkillLink skill="Cloud Technologies" />
+          </>,
           <>Incorporated both Fulltext & Tag-based search</>
         ]}
       />
@@ -72,7 +75,7 @@ export default function ExperienceSection() {
           ),
           description: "Research Automation Tool"
         }}
-        skills={[<SkillLink skill="UiPath" />]}
+        skills={[<FrameworkLink framework="UiPath" frameworkable="Robotics Process Automation" />]}
         time_props={{ children: "April 2022 - August 2022" }}
         actions={[
           <>
@@ -102,8 +105,9 @@ export default function ExperienceSection() {
         time_props={{ children: "May 2022 - August 2022" }}
         actions={[
           <>
-            Experimented with more than 6 Machine Learning models to predict annual salaries in the
-            field of Data Science
+            {"Experimented with more than 6 "}
+            <SkillLink skill="Data Science & Machine Learning" />
+            {" models to predict annual salaries in the field of Data Science"}
           </>,
           <>
             Followed the <strong>CRISP-DM Framework</strong>
