@@ -9,9 +9,9 @@ export default function SkillsSection() {
   return (
     <Section h2_props={{ children: "Skills" }}>
       <Subsection h3_props={{ children: "Competencies" }}>
-        <div>Data Science & Machine Learning</div>
-        <div>Robotics Process Automation</div>
-        <div>Cloud Technologies</div>
+        <Skill className="d-block" skill="Data Science & Machine Learning" />
+        <Skill className="d-block" skill="Robotics Process Automation" />
+        <Skill className="d-block" skill="Cloud Technologies" />
       </Subsection>
       <Subsection h3_props={{ children: "Languages & Tools" }}>
         <H5>Over 5000 lines:</H5>

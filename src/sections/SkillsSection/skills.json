@@ -1,6 +1,8 @@
 {
   "Adobe XD": {},
   "CSS": { "color": "#141E33" },
+  "Cloud Technologies": { "short": "Cloud" },
+  "Data Science & Machine Learning": { "short": "ML" },
   "Git": {},
   "GraphQL": { "color": "#260F1F" },
   "HTML": { "color": "#33142A" },
@@ -12,6 +14,7 @@
   "Python": { "color": "#2f3327" },
   "React Native": { "color": "#142C33" },
   "React": { "color": "#142C33" },
+  "Robotics Process Automation": { "short": "RPA" },
   "Solidity": { "color": "#333333" },
   "TypeScript": { "color": "#142233", "short": "TS" },
   "UiPath": { "color": "#331B14" },
