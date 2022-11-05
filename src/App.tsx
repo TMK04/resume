@@ -18,7 +18,7 @@ function App() {
     <div className="my-3">
       <header className="mx-5 text-center">
         <h1>
-          Tran Minh <strong>Khoa</strong>
+          Tran Minh <strong className="text-gradient text-dark-gradient">Khoa</strong>
         </h1>
         <address>
           <Link className="text-secondary" href="mailto:t.m.khoa.2308@gmail.com">

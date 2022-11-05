@@ -47,12 +47,14 @@
   --highlight: 238, 230, 0;
 
   --bg: 255, 255, 255;
+  --dark: 34, 20, 51;
   --light: 96, 96, 96;
 
   --text: 43, 43, 43;
 
   --bs-primary-rgb: var(--pri);
   --bs-secondary-rgb: var(--secondary);
+  --bs-dark-rgb: var(--dark);
   --bs-light-rgb: var(--light);
   --bs-black-rgb: var(--text);
 }
@@ -87,4 +89,16 @@ ul {
 
 .text-accent {
   color: rgb(var(--accent)) !important;
+}
+
+.text-gradient {
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--color-1) 15%, 25%, var(--color-2));
+  color: transparent;
+}
+
+.text-dark-gradient {
+  --color-1: rgb(var(--text));
+  --color-2: rgb(var(--dark));
 }
