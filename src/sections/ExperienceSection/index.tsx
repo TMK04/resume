@@ -1,12 +1,23 @@
 import Link from "../../components/Link";
 import { Section } from "../../components/Section";
+import Tooltip from "../../components/Tooltip";
 import { FrameworkLink, SkillLink } from "../SkillsSection/Skill";
 
 import Experience from "./Experience";
 
 export default function ExperienceSection() {
   return (
-    <Section h2_props={{ children: "Experience" }}>
+    <Section
+      h2_props={{
+        children: (
+          <>
+            Experience
+            <Tooltip title="Click on a Skill to scroll to its reference!" />
+          </>
+        ),
+        className: "align-items-center d-flex gap-2"
+      }}
+    >
       <Experience
         h3_props={{
           children: (

@@ -79,8 +79,20 @@ ul {
   margin-bottom: 0;
 }
 
+.bg-accent {
+  background-color: rgb(var(--accent)) !important;
+}
+
+.bg-highlight {
+  background-color: rgb(var(--highlight)) !important;
+}
+
 .cursor-default {
   cursor: default !important;
+}
+
+.cursor-help {
+  cursor: help !important;
 }
 
 .raleway {
@@ -89,6 +101,10 @@ ul {
 
 .text-accent {
   color: rgb(var(--accent)) !important;
+}
+
+.text-highlight {
+  color: rgb(var(--highlight)) !important;
 }
 
 .text-gradient {

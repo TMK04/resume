@@ -2,6 +2,7 @@ import BulletList from "../../components/BulletList";
 import { H5 } from "../../components/H";
 import { NormalInline } from "../../components/Normal";
 import { Section, Subsection } from "../../components/Section";
+import Tooltip from "../../components/Tooltip";
 
 import Skill from "./Skill";
 
@@ -9,7 +10,17 @@ import "./index.css";
 
 export default function SkillsSection() {
   return (
-    <Section h2_props={{ children: "Skills" }}>
+    <Section
+      h2_props={{
+        children: (
+          <>
+            Skills
+            <Tooltip title="Click on a Skill to see where it was applied!" />
+          </>
+        ),
+        className: "align-items-center d-flex gap-2"
+      }}
+    >
       <Subsection h3_props={{ children: "Competencies" }}>
         <Skill className="d-block" skill="Data Science & Machine Learning" />
         <Skill className="d-block" skill="Robotics Process Automation" />

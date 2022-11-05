@@ -1,6 +1,8 @@
 import { formatNonEmptyClassName } from "../helpers";
 
-export function NonPrint({ className, ...props }: JSX.IntrinsicElements["span"]) {
+export type NonPrintProps = JSX.IntrinsicElements["span"];
+
+export function NonPrint({ className, ...props }: NonPrintProps) {
   return <span className={`d-print-none${formatNonEmptyClassName(className)}`} {...props} />;
 }
 
