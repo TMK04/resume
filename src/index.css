@@ -92,6 +92,10 @@ ul {
   cursor: help !important;
 }
 
+.info:hover {
+  background-color: rgba(var(--info), 0.42);
+}
+
 .raleway {
   font-family: Raleway;
 }

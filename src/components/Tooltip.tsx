@@ -13,11 +13,11 @@ export default function Tooltip({
   const [class_name, setClassName] = useState(TOOLTIP_INITIAL_CLASS_NAME);
   return (
     <NonPrint
-      className={`bi bi-question-circle cursor-help d-flex fs-6 rounded-circle ${class_name}${formatNonEmptyClassName(
+      className={`bi bi-question-circle cursor-help d-flex fs-6 info rounded-circle ${class_name}${formatNonEmptyClassName(
         className
       )}`}
       onMouseOut={() => setClassName(TOOLTIP_INITIAL_CLASS_NAME)}
-      onMouseOver={() => setClassName("bg-info text-accent")}
+      onMouseOver={() => setClassName("text-accent")}
       {...props}
     />
   );
