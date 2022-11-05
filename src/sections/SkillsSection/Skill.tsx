@@ -1,4 +1,5 @@
-import Link from "../../components/Link";
+import { CSSProperties, useState } from "react";
+
 import { formatNonEmptyStr } from "../../helpers";
 
 import untyped_skills from "./skills.json";
@@ -21,21 +22,49 @@ export function wrap(short: string) {
 type SkillProps = { skill: SkillKey };
 
 export default function Skill({ skill }: SkillProps) {
-  const { short } = skills[skill];
+  const skills_skill = skills[skill];
+  const short = skills_skill.short;
+  const skill_color = skills_skill.color || "rgb(var(--text))";
+
+  const initial_style: CSSProperties = {
+    backgroundColor: "transparent",
+    color: skill_color,
+    fontWeight: "normal"
+  };
+  const [style, setStyle] = useState(initial_style);
+
   return (
-    <span id={skillId(skill)}>{`${skill}${formatNonEmptyStr(
-      short,
-      (short) => ` ${wrap(short)}`
-    )}`}</span>
+    <button
+      className="border-0 cursor-default p-0"
+      id={skillId(skill)}
+      onBlur={() => {
+        setStyle(initial_style);
+      }}
+      onFocus={() => {
+        setStyle({
+          backgroundColor: skill_color,
+          color: "white",
+          fontWeight: "bold"
+        });
+      }}
+      style={style}
+    >{`${skill}${formatNonEmptyStr(short, (short) => ` ${wrap(short)}`)}`}</button>
   );
 }
 
 export function SkillLink({ skill }: SkillProps) {
   const { color, short } = skills[skill];
   return (
-    <Link href={`#${skillId(skill)}`} style={{ color }}>
+    <span
+      onClick={() => {
+        const el = document.getElementById(skillId(skill));
+        el?.focus();
+      }}
+      style={{ color }}
+      role="button"
+    >
       {short ? wrap(short) : skill}
-    </Link>
+    </span>
   );
 }
 

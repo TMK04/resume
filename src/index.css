@@ -77,6 +77,10 @@ ul {
   margin-bottom: 0;
 }
 
+.cursor-default {
+  cursor: default !important;
+}
+
 .raleway {
   font-family: Raleway;
 }
