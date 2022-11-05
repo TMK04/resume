@@ -4,6 +4,8 @@ import { formatNonEmptyClassName, formatNonEmptyStr } from "../../helpers";
 
 import untyped_skills from "./skills.json";
 
+import "./Skill.css";
+
 type SkillKey = keyof typeof untyped_skills;
 
 const skills: Record<SkillKey, { color?: string; short?: string }> = untyped_skills;
@@ -40,7 +42,7 @@ export default function Skill({ className, skill, ...props }: SkillProps) {
 
   return (
     <button
-      className={`border-0 cursor-default p-0${formatNonEmptyClassName(className)}`}
+      className={`border-0 cursor-default p-0 skill${formatNonEmptyClassName(className)}`}
       id={skillId(skill)}
       onBlur={() => {
         setStyle(initial_style);
@@ -69,7 +71,10 @@ export function SkillLink({ format, skill }: SkillLinkProps) {
     <span
       onClick={() => {
         const el = document.getElementById(skillId(skill));
-        el?.focus();
+        if (el) {
+          el.focus();
+          setTimeout(() => el.blur(), 1500);
+        }
       }}
       style={{ color }}
       role="button"
