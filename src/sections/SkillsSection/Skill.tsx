@@ -25,40 +25,61 @@ type PropsWithSkill = {
   skill: SkillKey;
 };
 
-type SkillProps = Omit<JSX.IntrinsicElements["button"], "id" | "onBlur" | "onFocus" | "style"> &
-  PropsWithSkill;
+type BaseSkillProps = Omit<JSX.IntrinsicElements["button"], "onBlur" | "onFocus" | "style"> &
+  PropsWithSkill &
+  Partial<Record<"blur_style" | "focus_style", CSSProperties>>;
 
-export default function Skill({ className, skill, ...props }: SkillProps) {
-  const skills_skill = skills[skill];
-  const short = skills_skill.short;
-  const skill_color = skills_skill.color || "rgb(var(--text))";
+function BaseSkill({
+  className,
+  blur_style: blur_style_prop,
+  focus_style,
+  skill,
+  ...props
+}: BaseSkillProps) {
+  const skill_color = skills[skill].color || "rgb(var(--text))";
 
-  const initial_style: CSSProperties = {
+  const blur_style: CSSProperties = {
     backgroundColor: "transparent",
     color: skill_color,
-    fontWeight: "normal",
-    padding: 0
+    padding: 0,
+    ...blur_style_prop
   };
-  const [style, setStyle] = useState(initial_style);
+  const [style, setStyle] = useState(blur_style);
 
   return (
     <button
-      className={`border-0 cursor-default rounded-1 skill${formatNonEmptyClassName(className)}`}
-      id={skillId(skill)}
+      className={`border-0 rounded-1 skill${formatNonEmptyClassName(className)}`}
       onBlur={() => {
-        setStyle(initial_style);
+        setStyle(blur_style);
       }}
       onFocus={() => {
         setStyle({
           backgroundColor: skill_color,
           color: "white",
-          fontWeight: "bold",
-          padding: "0 0.18rem"
+          padding: "0 0.18rem",
+          ...focus_style
         });
       }}
       style={style}
       {...props}
-    >{`${skill}${formatNonEmptyStr(short, (short) => ` ${wrap(short)}`)}`}</button>
+    />
+  );
+}
+
+export default function Skill({
+  skill,
+  ...props
+}: Omit<BaseSkillProps, "id" | "onBlur" | "onFocus" | "style">) {
+  const short = skills[skill].short;
+
+  return (
+    <BaseSkill
+      blur_style={{ fontWeight: "normal" }}
+      focus_style={{ fontWeight: "bold" }}
+      id={skillId(skill)}
+      skill={skill}
+      {...props}
+    >{`${skill}${formatNonEmptyStr(short, (short) => ` ${wrap(short)}`)}`}</BaseSkill>
   );
 }
 
@@ -68,9 +89,11 @@ type SkillLinkProps = PropsWithSkill & {
 
 export function SkillLink({ format, skill }: SkillLinkProps) {
   format ||= (skill: string) => skill;
-  const { color, short } = skills[skill];
+  const short = skills[skill].short;
+
   return (
-    <span
+    <BaseSkill
+      blur_style={{ fontWeight: "bold" }}
       onClick={() => {
         const el = document.getElementById(skillId(skill));
         if (el) {
@@ -78,11 +101,10 @@ export function SkillLink({ format, skill }: SkillLinkProps) {
           setTimeout(() => el.blur(), 1500);
         }
       }}
-      style={{ color }}
-      role="button"
+      skill={skill}
     >
       {format(short || skill)}
-    </span>
+    </BaseSkill>
   );
 }
 
