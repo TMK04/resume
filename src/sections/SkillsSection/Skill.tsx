@@ -104,7 +104,10 @@ export function SkillLink({ format, skill }: SkillLinkProps) {
       data-skill={skill_id}
       onClick={() => {
         const el = document.getElementById(skill_id);
-        if (el) tttSkill(el, ["fw-bold"], 1500);
+        if (el) {
+          el.focus();
+          tttSkill(el, ["fw-bold"], 1500);
+        }
       }}
       skill={skill}
     >
