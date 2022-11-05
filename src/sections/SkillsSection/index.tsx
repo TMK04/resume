@@ -80,10 +80,7 @@ export default function SkillsSection() {
         </H5>
         <H5>
           Team Player:
-          <NormalInline>
-            {" Upholds "}
-            <em>team spirit</em> & values collective innovation
-          </NormalInline>
+          <NormalInline>{" Upholds team spirit & values collective innovation"}</NormalInline>
         </H5>
       </Subsection>
     </Section>

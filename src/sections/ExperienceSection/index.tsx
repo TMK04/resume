@@ -40,7 +40,7 @@ export default function ExperienceSection() {
             >
               Klaytn
             </Link>{" "}
-            & deployed on their <em>Blockchain</em>
+            & deployed on their Blockchain
           </>,
           <>
             Worked in a <b>team of 6</b> using Git, Discord, & Remnote to organize code,
