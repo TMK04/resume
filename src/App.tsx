@@ -2,7 +2,7 @@ import Detail from "./components/Detail";
 import { H5 } from "./components/H";
 import Link from "./components/Link";
 import { NormalInline } from "./components/Normal";
-import PrintSwitch from "./components/PrintSwitch";
+import { PrintSwitch } from "./components/Print";
 import { Separator, SeparatorInline } from "./components/Separators";
 import EducationSection from "./sections/EducationSection";
 import ExperienceSection from "./sections/ExperienceSection";

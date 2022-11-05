@@ -1,6 +1,6 @@
 import Detail from "../../components/Detail";
 import Link from "../../components/Link";
-import PrintSwitch from "../../components/PrintSwitch";
+import { PrintSwitch } from "../../components/Print";
 import { Section } from "../../components/Section";
 
 export default function LinksSection() {
