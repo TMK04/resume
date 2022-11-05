@@ -19,9 +19,12 @@ export function wrap(short: string) {
   return `(${short})`;
 }
 
-type SkillProps = Omit<JSX.IntrinsicElements["button"], "id" | "onBlur" | "onFocus" | "style"> & {
+type PropsWithSkill = {
   skill: SkillKey;
 };
+
+type SkillProps = Omit<JSX.IntrinsicElements["button"], "id" | "onBlur" | "onFocus" | "style"> &
+  PropsWithSkill;
 
 export default function Skill({ className, skill, ...props }: SkillProps) {
   const skills_skill = skills[skill];
@@ -55,7 +58,12 @@ export default function Skill({ className, skill, ...props }: SkillProps) {
   );
 }
 
-export function SkillLink({ skill }: SkillProps) {
+type SkillLinkProps = PropsWithSkill & {
+  format?: (skill: string) => string;
+};
+
+export function SkillLink({ format, skill }: SkillLinkProps) {
+  format ||= (skill: string) => skill;
   const { color, short } = skills[skill];
   return (
     <span
@@ -66,7 +74,7 @@ export function SkillLink({ skill }: SkillProps) {
       style={{ color }}
       role="button"
     >
-      {short ? wrap(short) : skill}
+      {format(short || skill)}
     </span>
   );
 }
@@ -77,7 +85,7 @@ export function FrameworkLink({
 }: Record<"framework" | "frameworkable", SkillKey>) {
   return (
     <span>
-      <SkillLink skill={framework} /> <SkillLink skill={frameworkable} />
+      <SkillLink skill={framework} /> <SkillLink format={wrap} skill={frameworkable} />
     </span>
   );
 }
