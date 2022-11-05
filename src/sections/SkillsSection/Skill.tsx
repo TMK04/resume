@@ -1,6 +1,6 @@
 import { CSSProperties, useState } from "react";
 
-import { formatNonEmptyStr } from "../../helpers";
+import { formatNonEmptyClassName, formatNonEmptyStr } from "../../helpers";
 
 import untyped_skills from "./skills.json";
 
@@ -19,9 +19,11 @@ export function wrap(short: string) {
   return `(${short})`;
 }
 
-type SkillProps = { skill: SkillKey };
+type SkillProps = Omit<JSX.IntrinsicElements["button"], "id" | "onBlur" | "onFocus" | "style"> & {
+  skill: SkillKey;
+};
 
-export default function Skill({ skill }: SkillProps) {
+export default function Skill({ className, skill, ...props }: SkillProps) {
   const skills_skill = skills[skill];
   const short = skills_skill.short;
   const skill_color = skills_skill.color || "rgb(var(--text))";
@@ -35,7 +37,7 @@ export default function Skill({ skill }: SkillProps) {
 
   return (
     <button
-      className="border-0 cursor-default p-0"
+      className={`border-0 cursor-default p-0${formatNonEmptyClassName(className)}`}
       id={skillId(skill)}
       onBlur={() => {
         setStyle(initial_style);
@@ -48,6 +50,7 @@ export default function Skill({ skill }: SkillProps) {
         });
       }}
       style={style}
+      {...props}
     >{`${skill}${formatNonEmptyStr(short, (short) => ` ${wrap(short)}`)}`}</button>
   );
 }
