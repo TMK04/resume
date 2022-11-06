@@ -89,6 +89,10 @@ export default function Skill({
   );
 }
 
+export function SkillApplication({ skill, ...props }: BaseSkillProps) {
+  return <BaseSkill data-skill={skillId(skill)} skill={skill} {...props} />;
+}
+
 type SkillLinkProps = PropsWithSkill & {
   format?: (skill: string) => string;
 };
@@ -96,14 +100,12 @@ type SkillLinkProps = PropsWithSkill & {
 export function SkillLink({ format, skill }: SkillLinkProps) {
   format ||= (skill: string) => skill;
   const short = skills[skill].short;
-  const skill_id = skillId(skill);
 
   return (
-    <BaseSkill
+    <SkillApplication
       className="fw-bold"
-      data-skill={skill_id}
       onClick={() => {
-        const el = document.getElementById(skill_id);
+        const el = document.getElementById(skillId(skill));
         if (el) {
           el.focus();
           tttSkill(el, ["fw-bold"], 1500);
@@ -112,7 +114,7 @@ export function SkillLink({ format, skill }: SkillLinkProps) {
       skill={skill}
     >
       {format(short || skill)}
-    </BaseSkill>
+    </SkillApplication>
   );
 }
 
