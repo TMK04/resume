@@ -108,9 +108,7 @@ export default function ExperienceSection() {
           )
         }}
         skills={[
-          <span>
-            <SkillLink skill="Python" /> Notebooks
-          </span>,
+          <SkillLink format={(Python: string) => `${Python} Notebooks`} skill="Python" />,
           <SkillLink skill="HTML" />
         ]}
         time_props={{ children: "May 2022 - August 2022" }}
