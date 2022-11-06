@@ -1,3 +1,4 @@
+import Link from "../../components/Link";
 import { Section } from "../../components/Section";
 
 export default function LnASection() {
@@ -12,7 +13,13 @@ export default function LnASection() {
               <br />1<sup>st</sup>/14 teams in Category
             </td>
             <td>
-              PolyFinTech 100 API Hackathon
+              <Link
+                className="fw-bold text-accent"
+                id="lna-pf100"
+                href="http://polyfintech100hackathon.sg"
+              >
+                PolyFinTech 100 API Hackathon
+              </Link>
               <br />
               Category: Creator Economy (Team Mala)
             </td>

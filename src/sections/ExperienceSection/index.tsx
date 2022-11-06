@@ -21,7 +21,7 @@ export default function ExperienceSection() {
       <Experience
         h3_props={{
           children: (
-            <Link className="text-accent" href="http://polyfintech100hackathon.sg">
+            <Link className="text-accent" href="#lna-pf100" target="_self">
               PolyFinTech 100 API Hackathon
             </Link>
           )
