@@ -93,6 +93,14 @@ export function SkillApplication({ skill, ...props }: BaseSkillProps) {
   return <BaseSkill data-skill={skillId(skill)} skill={skill} {...props} />;
 }
 
+export function ForwardSkillApplication({ children, className, ...props }: BaseSkillProps) {
+  return (
+    <SkillApplication className={`cursor-default${formatNonEmptyClassName(className)}`} {...props}>
+      <strong>{children}</strong>
+    </SkillApplication>
+  );
+}
+
 type SkillLinkProps = PropsWithSkill & {
   format?: (skill: string) => string;
 };

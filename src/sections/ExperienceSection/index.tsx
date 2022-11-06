@@ -1,7 +1,12 @@
 import Link from "../../components/Link";
 import { Section } from "../../components/Section";
 import Tooltip from "../../components/Tooltip";
-import { FrameworkLink, SkillLink } from "../SkillsSection/Skill";
+import {
+  ForwardSkillApplication,
+  FrameworkLink,
+  SkillApplication,
+  SkillLink
+} from "../SkillsSection/Skill";
 
 import Experience from "./Experience";
 
@@ -55,8 +60,9 @@ export default function ExperienceSection() {
             & deployed on their Blockchain
           </>,
           <>
-            Worked in a <b>team of 6</b> using Git, Discord, & Remnote to organize code,
-            communication, & knowledge respectively
+            {"Worked in a "}
+            <ForwardSkillApplication skill="Team Player">team of 6</ForwardSkillApplication> using
+            Git, Discord, & Remnote to organize code, communication, & knowledge respectively
           </>
         ]}
       />
@@ -96,7 +102,7 @@ export default function ExperienceSection() {
           <>
             Shortened time taken to gather resources from <em>several minutes</em>
             {" to "}
-            <strong>30 seconds</strong>
+            <ForwardSkillApplication skill="High Achiever">30 seconds</ForwardSkillApplication>
           </>
         ]}
       />
@@ -121,7 +127,8 @@ export default function ExperienceSection() {
             {" models to predict annual salaries in the field of Data Science"}
           </>,
           <>
-            Followed the <strong>CRISP-DM Framework</strong>
+            Followed the{" "}
+            <ForwardSkillApplication skill="Systematic">CRISP-DM Framework</ForwardSkillApplication>
           </>
         ]}
       />
@@ -145,10 +152,12 @@ export default function ExperienceSection() {
           <>
             {"Followed "}
             <Link
-              className="fw-bold text-black"
+              className="text-black"
               href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"
             >
-              Responsive Design
+              <SkillApplication className="fw-bold" skill="Systematic">
+                Responsive Design
+              </SkillApplication>
             </Link>
             {" to make website viewable on mobile"}
           </>
