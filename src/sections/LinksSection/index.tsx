@@ -1,4 +1,3 @@
-import Detail from "../../components/Detail";
 import Link from "../../components/Link";
 import { PrintSwitch } from "../../components/Print";
 import { Section } from "../../components/Section";
@@ -10,25 +9,21 @@ export default function LinksSection() {
         <div>
           GitHub:
           <PrintSwitch normal={{ children: "//" }} print={{ children: " " }} />
-          <Link className="fw-bold text-accent" href="https://github.com/TMK04">
-            <Detail>
-              <PrintSwitch
-                normal={{ children: "TMK04" }}
-                print={{ children: "https://github.com/TMK04" }}
-              />
-            </Detail>
+          <Link className="raleway text-accent" href="https://github.com/TMK04">
+            <PrintSwitch
+              normal={{ children: "TMK04" }}
+              print={{ children: "https://github.com/TMK04" }}
+            />
           </Link>
         </div>
         <div>
           LinkedIn:
           <PrintSwitch normal={{ children: "//" }} print={{ children: " " }} />
-          <Link className="fw-bold text-accent" href="https://www.linkedin.com/in/tmk04">
-            <Detail>
-              <PrintSwitch
-                normal={{ children: "tmk04" }}
-                print={{ children: "https://www.linkedin.com/in/tmk04" }}
-              />
-            </Detail>
+          <Link className="raleway text-accent" href="https://www.linkedin.com/in/tmk04">
+            <PrintSwitch
+              normal={{ children: "tmk04" }}
+              print={{ children: "https://www.linkedin.com/in/tmk04" }}
+            />
           </Link>
         </div>
       </address>

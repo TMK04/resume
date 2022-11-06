@@ -1,4 +1,3 @@
-import Detail from "./components/Detail";
 import { H5 } from "./components/H";
 import Link from "./components/Link";
 import { NormalInline } from "./components/Normal";
@@ -21,18 +20,21 @@ function App() {
           Tran Minh <strong className="text-gradient text-dark-gradient">Khoa</strong>
         </h1>
         <address>
-          <Link className="text-secondary" href="mailto:t.m.khoa.2308@gmail.com">
-            <Detail>t.m.khoa.2308@gmail.com</Detail>
+          <Link className="fw-bold raleway text-secondary" href="mailto:t.m.khoa.2308@gmail.com">
+            t.m.khoa.2308@gmail.com
           </Link>
           <SeparatorInline className="fw-bold">|</SeparatorInline>
-          <Link className="text-secondary" href="tel:+6580138550">
-            <Detail>+65 8013 8550</Detail>
+          <Link className="fw-bold raleway text-secondary" href="tel:+6580138550">
+            +65 8013 8550
           </Link>
           <div>
             <H5>
               {"Digital Resume: "}
               <NormalInline>
-                <Link href="https://tmk04-resume.s3.ap-southeast-1.amazonaws.com/index.html">
+                <Link
+                  className="fw-bold"
+                  href="https://tmk04-resume.s3.ap-southeast-1.amazonaws.com/index.html"
+                >
                   <PrintSwitch
                     normal={{ children: "tmk04-resume" }}
                     print={{
