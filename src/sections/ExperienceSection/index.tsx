@@ -30,7 +30,8 @@ export default function ExperienceSection() {
           <FrameworkLink framework="React" frameworkable="TypeScript" />,
           <FrameworkLink framework="React Native" frameworkable="TypeScript" />,
           <SkillLink skill="CSS" />,
-          <SkillLink skill="Solidity" />
+          <SkillLink skill="Solidity" />,
+          <SkillLink skill="Adobe XD" />
         ]}
         time_props={{ children: "April 2022 - November 2022" }}
         actions={[
@@ -109,6 +110,7 @@ export default function ExperienceSection() {
         }}
         skills={[
           <SkillLink format={(Python: string) => `${Python} Notebooks`} skill="Python" />,
+          <SkillLink skill="Markdown" />,
           <SkillLink skill="HTML" />
         ]}
         time_props={{ children: "May 2022 - August 2022" }}
