@@ -9,7 +9,7 @@ export default function LinksSection() {
         <div>
           GitHub:
           <PrintSwitch normal={{ children: "//" }} print={{ children: " " }} />
-          <Link className="raleway text-accent" href="https://github.com/TMK04">
+          <Link className="fw-bold raleway text-accent" href="https://github.com/TMK04">
             <PrintSwitch
               normal={{ children: "TMK04" }}
               print={{ children: "https://github.com/TMK04" }}
@@ -19,7 +19,7 @@ export default function LinksSection() {
         <div>
           LinkedIn:
           <PrintSwitch normal={{ children: "//" }} print={{ children: " " }} />
-          <Link className="raleway text-accent" href="https://www.linkedin.com/in/tmk04">
+          <Link className="fw-bold raleway text-accent" href="https://www.linkedin.com/in/tmk04">
             <PrintSwitch
               normal={{ children: "tmk04" }}
               print={{ children: "https://www.linkedin.com/in/tmk04" }}
