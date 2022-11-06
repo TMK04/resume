@@ -3,12 +3,13 @@ import { formatNonEmptyClassName } from "../helpers";
 export default function Link({
   children,
   className,
+  target,
   ...props
-}: Omit<JSX.IntrinsicElements["a"], "target">) {
+}: JSX.IntrinsicElements["a"]) {
   return (
     <a
       className={`info text-decoration-none${formatNonEmptyClassName(className)}`}
-      target="_blank"
+      target={target || "_blank"}
       {...props}
     >
       {children}
