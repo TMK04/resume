@@ -48,17 +48,17 @@ function App() {
         </address>
       </header>
       <Separator />
-      <main className="d-flex flex-column flex-md-row-reverse gap-md-5 mx-5">
-        <article className="d-flex flex-column gap-3" id="top-article">
-          <ExperienceSection />
-          <LnASection />
-        </article>
-        <br className="d-none d-print-block" />
+      <main className="d-flex flex-column flex-md-row gap-md-5 mx-5">
         <aside className="d-flex flex-column gap-3" id="top-aside">
           <EducationSection />
           <LinksSection />
           <SkillsSection />
         </aside>
+        <article className="d-flex flex-column gap-3" id="top-article">
+          <ExperienceSection />
+          <LnASection />
+        </article>
+        <br className="d-none d-print-block" />
       </main>
       <Separator />
       <footer className="mx-5">
