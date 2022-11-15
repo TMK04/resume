@@ -9,9 +9,9 @@ import LinksSection from "./sections/LinksSection";
 import LnASection from "./sections/LnASection";
 import ReferencesSection from "./sections/ReferencesSection";
 import SkillsSection from "./sections/SkillsSection";
+import { SkillsApplication } from "./sections/SkillsSection/Skill";
 
 import "./App.css";
-import { SkillApplication } from "./sections/SkillsSection/Skill";
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
           <div>
             <H5>
               {"Digital Resume: "}
-              <SkillApplication skill="Cloud Technologies">
+              <SkillsApplication skill="Cloud Technologies">
                 <NormalInline>
                   <Link className="fw-bold" href="https://tmk04-resume.com">
                     <PrintSwitch
@@ -42,7 +42,7 @@ function App() {
                     />
                   </Link>
                 </NormalInline>
-              </SkillApplication>
+              </SkillsApplication>
             </H5>
           </div>
         </address>

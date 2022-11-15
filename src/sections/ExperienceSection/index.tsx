@@ -2,10 +2,10 @@ import Link from "../../components/Link";
 import { Section } from "../../components/Section";
 import Tooltip from "../../components/Tooltip";
 import {
-  ForwardSkillApplication,
+  ForwardSkillsApplication,
   FrameworkLink,
-  SkillApplication,
-  SkillLink
+  SkillsApplication,
+  SkillsLink
 } from "../SkillsSection/Skill";
 
 import Experience from "./Experience";
@@ -34,9 +34,9 @@ export default function ExperienceSection() {
         skills={[
           <FrameworkLink framework="React" frameworkable="TypeScript" />,
           <FrameworkLink framework="React Native" frameworkable="TypeScript" />,
-          <SkillLink skill="CSS" />,
-          <SkillLink skill="Solidity" />,
-          <SkillLink skill="Adobe XD" />
+          <SkillsLink skill="CSS" />,
+          <SkillsLink skill="Solidity" />,
+          <SkillsLink skill="Adobe XD" />
         ]}
         time_props={{ children: "April 2022 - November 2022" }}
         actions={[
@@ -61,7 +61,7 @@ export default function ExperienceSection() {
           </>,
           <>
             {"Worked in a "}
-            <ForwardSkillApplication skill="Team Player">team of 6</ForwardSkillApplication> using
+            <ForwardSkillsApplication skill="Team Player">team of 6</ForwardSkillsApplication> using
             Git, Discord, & Remnote to organize code, communication, & knowledge respectively
           </>
         ]}
@@ -73,13 +73,13 @@ export default function ExperienceSection() {
         }}
         skills={[
           <FrameworkLink framework="React" frameworkable="TypeScript" />,
-          <SkillLink skill="CSS" />
+          <SkillsLink skill="CSS" />
         ]}
         time_props={{ children: "April 2022 - August 2022" }}
         actions={[
           <>
             {"Set up Elastic Beanstalk, Lambda, S3, & other services on "}
-            <SkillLink format={() => "AWS Cloud"} skill="Cloud Technologies" />
+            <SkillsLink format={() => "AWS Cloud"} skill="Cloud Technologies" />
           </>,
           <>Incorporated both Fulltext & Tag-based search</>
         ]}
@@ -102,7 +102,7 @@ export default function ExperienceSection() {
           <>
             Shortened time taken to gather resources from <em>several minutes</em>
             {" to "}
-            <ForwardSkillApplication skill="High Achiever">30 seconds</ForwardSkillApplication>
+            <ForwardSkillsApplication skill="High Achiever">30 seconds</ForwardSkillsApplication>
           </>
         ]}
       />
@@ -115,20 +115,22 @@ export default function ExperienceSection() {
           )
         }}
         skills={[
-          <SkillLink format={(Python: string) => `${Python} Notebooks`} skill="Python" />,
-          <SkillLink skill="Markdown" />,
-          <SkillLink skill="HTML" />
+          <SkillsLink format={(Python: string) => `${Python} Notebooks`} skill="Python" />,
+          <SkillsLink skill="Markdown" />,
+          <SkillsLink skill="HTML" />
         ]}
         time_props={{ children: "May 2022 - August 2022" }}
         actions={[
           <>
             {"Experimented with more than 6 "}
-            <SkillLink skill="Data Science & Machine Learning" />
+            <SkillsLink skill="Data Science & Machine Learning" />
             {" models to predict annual salaries in the field of Data Science"}
           </>,
           <>
             Followed the{" "}
-            <ForwardSkillApplication skill="Systematic">CRISP-DM Framework</ForwardSkillApplication>
+            <ForwardSkillsApplication skill="Systematic">
+              CRISP-DM Framework
+            </ForwardSkillsApplication>
           </>
         ]}
       />
@@ -143,8 +145,8 @@ export default function ExperienceSection() {
         }}
         skills={[
           <FrameworkLink framework="Web Components" frameworkable="TypeScript" />,
-          <SkillLink skill="CSS" />,
-          <SkillLink skill="MySQL" />
+          <SkillsLink skill="CSS" />,
+          <SkillsLink skill="MySQL" />
         ]}
         time_props={{ children: "October 2021 - February 2022" }}
         actions={[
@@ -155,9 +157,9 @@ export default function ExperienceSection() {
               className="text-black"
               href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"
             >
-              <SkillApplication className="fw-bold" skill="Systematic">
+              <SkillsApplication className="fw-bold" skill="Systematic">
                 Responsive Design
-              </SkillApplication>
+              </SkillsApplication>
             </Link>
             {" to make website viewable on mobile"}
           </>

@@ -80,7 +80,7 @@ export default function Skill({
       id={id}
       onClick={() => {
         document
-          .querySelectorAll(`[data-skill=${id}]`)
+          .querySelectorAll(`[data-skills*=${id}]`)
           .forEach((el) => tttSkill(el as HTMLElement, [], 3500));
       }}
       skill={skill}
@@ -89,40 +89,64 @@ export default function Skill({
   );
 }
 
-export function SkillApplication({ skill, ...props }: BaseSkillProps) {
-  return <BaseSkill data-skill={skillId(skill)} skill={skill} {...props} />;
-}
+type PropsWithSkills = {
+  skills?: SkillKey[];
+};
 
-export function ForwardSkillApplication({ children, className, ...props }: BaseSkillProps) {
+type SkillsApplicationProps = BaseSkillProps & PropsWithSkills;
+
+export function SkillsApplication({ skill, skills, ...props }: SkillsApplicationProps) {
+  const skills_set = new Set<SkillKey>(skills || []).add(skill);
   return (
-    <SkillApplication className={`cursor-default${formatNonEmptyClassName(className)}`} {...props}>
-      <strong>{children}</strong>
-    </SkillApplication>
+    <BaseSkill
+      data-skills={Array.from(skills_set).map(skillId).join(",")}
+      skill={skill}
+      {...props}
+    />
   );
 }
 
-type SkillLinkProps = PropsWithSkill & {
-  format?: (skill: string) => string;
-};
+export function ForwardSkillsApplication({
+  children,
+  className,
+  ...props
+}: SkillsApplicationProps) {
+  return (
+    <SkillsApplication className={`cursor-default${formatNonEmptyClassName(className)}`} {...props}>
+      <strong>{children}</strong>
+    </SkillsApplication>
+  );
+}
 
-export function SkillLink({ format, skill }: SkillLinkProps) {
+type SkillsLinkProps = PropsWithSkill &
+  PropsWithSkills & {
+    format?: (skill: string) => string;
+  };
+
+export function SkillsLink({ format, skill, skills: skills_prop }: SkillsLinkProps) {
   format ||= (skill: string) => skill;
+  const skills_set = new Set<SkillKey>(skills_prop || []).add(skill);
   const short = skills[skill].short;
 
   return (
-    <SkillApplication
+    <SkillsApplication
       className="fw-bold"
-      onClick={() => {
-        const el = document.getElementById(skillId(skill));
-        if (el) {
-          el.focus();
-          tttSkill(el, ["fw-bold"], 1500);
-        }
-      }}
+      onClick={() =>
+        Promise.allSettled(
+          Array.from(skills_set).map(async (skill) => {
+            const el = document.getElementById(skillId(skill));
+            if (el) {
+              el.focus();
+              tttSkill(el, ["fw-bold"], 1500);
+            }
+          })
+        )
+      }
       skill={skill}
+      skills={skills_prop}
     >
       {format(short || skill)}
-    </SkillApplication>
+    </SkillsApplication>
   );
 }
 
@@ -131,8 +155,10 @@ export function FrameworkLink({
   frameworkable
 }: Record<"framework" | "frameworkable", SkillKey>) {
   return (
-    <span>
-      <SkillLink skill={framework} /> <SkillLink format={wrap} skill={frameworkable} />
-    </span>
+    <SkillsLink
+      skill={framework}
+      skills={[frameworkable]}
+      format={(framework) => `${framework} ${wrap(skills[frameworkable].short || frameworkable)}`}
+    />
   );
 }
