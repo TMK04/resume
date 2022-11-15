@@ -32,7 +32,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf build && react-scripts build",
-    "deploy": "yarn build && aws s3 rm s3://tmk04-resume --recursive && aws s3 sync build s3://tmk04-resume",
+    "deploy": "scripts/deploy.sh",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "husky install",
