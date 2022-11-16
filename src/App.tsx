@@ -35,7 +35,7 @@ function App() {
                 <NormalInline>
                   <Link className="fw-bold" href="https://tmk04-resume.com">
                     <PrintSwitch
-                      normal={{ children: "tmk04-resume" }}
+                      normal={{ children: "tmk04-resume.com" }}
                       print={{
                         children: "https://tmk04-resume.s3.ap-southeast-1.amazonaws.com/index.html"
                       }}
