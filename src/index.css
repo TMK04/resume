@@ -109,10 +109,16 @@ ul {
 }
 
 .text-gradient {
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: linear-gradient(to right, var(--color-1) 15%, 25%, var(--color-2));
-  color: transparent;
+  color: var(--color-1);
+}
+
+@media not print {
+  .text-dark-gradient {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right, var(--color-1) 15%, 25%, var(--color-2));
+    color: transparent;
+  }
 }
 
 .text-dark-gradient {
