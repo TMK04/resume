@@ -6,7 +6,8 @@ import "./Skill.css";
 
 type SkillKey = keyof typeof untyped_skills;
 
-const skills: Record<SkillKey, { color?: string }> = untyped_skills;
+const skills: Record<SkillKey, { color?: string; framework_of?: SkillKey[] }> =
+  untyped_skills as any;
 
 const INITIAL_CLASS_LIST = ["bg-transparent", "p-0"];
 const TOGGLED_CLASS_LIST = ["text-white"];
@@ -79,7 +80,7 @@ export default function Skill({
       id={id}
       onClick={() => {
         document
-          .querySelectorAll(`[data-skills*=${id}]`)
+          .querySelectorAll(`[data-skills~=${id}]`)
           .forEach((el) => tttSkill(el as HTMLElement, [], 3500));
       }}
       skill={skill}
@@ -96,11 +97,30 @@ type PropsWithSkills = {
 
 type SkillsApplicationProps = BaseSkillProps & PropsWithSkills;
 
-export function SkillsApplication({ skill, skills, ...props }: SkillsApplicationProps) {
-  const skills_set = new Set<SkillKey>(skills || []).add(skill);
+function frameworkSkills(skills_prop: SkillKey[] | undefined, skill: SkillKey) {
+  skills_prop ||= [];
+  const skills_set = new Set<SkillKey>(skills_prop).add(skill);
+  for (const skill of skills_prop) {
+    const framework_of = skills[skill].framework_of;
+    if (framework_of) {
+      for (const frameworkable of framework_of) {
+        skills_set.add(frameworkable);
+      }
+    }
+  }
+  return skills_set;
+}
+
+export function SkillsApplication({
+  skill,
+  skills: skills_prop,
+  ...props
+}: SkillsApplicationProps) {
+  const skills_set = frameworkSkills(skills_prop, skill);
+
   return (
     <BaseSkill
-      data-skills={Array.from(skills_set).map(skillId).join(",")}
+      data-skills={Array.from(skills_set).map(skillId).join(" ")}
       skill={skill}
       {...props}
     />
@@ -126,7 +146,7 @@ type SkillsLinkProps = PropsWithSkill &
 
 export function SkillsLink({ format, skill, skills: skills_prop }: SkillsLinkProps) {
   format ||= (skill: string) => skill;
-  const skills_set = new Set<SkillKey>(skills_prop || []).add(skill);
+  const skills_set = frameworkSkills(skills_prop, skill);
 
   return (
     <SkillsApplication

@@ -21,8 +21,8 @@
   "Robotics Process Automation": {},
   "Solidity": { "color": "#333333" },
   "Systematic": { "color": "#33142F" },
-  "TypeScript": { "color": "#142233" },
-  "UiPath": { "color": "#331B14" },
+  "TypeScript": { "color": "#142233", "framework_of": ["JavaScript"] },
+  "UiPath": { "color": "#331B14", "framework_of": ["Robotics Process Automation"] },
   "Web Components": { "color": "#143328" },
   "XML": {}
 }
