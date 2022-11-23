@@ -1,4 +1,4 @@
-import { formatNonEmptyClassName, formatNonEmptyStr } from "../../helpers";
+import { formatNonEmptyClassName } from "../../helpers";
 
 import untyped_skills from "./skills.json";
 
@@ -6,7 +6,7 @@ import "./Skill.css";
 
 type SkillKey = keyof typeof untyped_skills;
 
-const skills: Record<SkillKey, { color?: string; short?: string }> = untyped_skills;
+const skills: Record<SkillKey, { color?: string }> = untyped_skills;
 
 const INITIAL_CLASS_LIST = ["bg-transparent", "p-0"];
 const TOGGLED_CLASS_LIST = ["text-white"];
@@ -72,7 +72,6 @@ export default function Skill({
   skill,
   ...props
 }: Omit<BaseSkillProps, "id" | "onBlur" | "onFocus" | "style">) {
-  const short = skills[skill].short;
   const id = skillId(skill);
 
   return (
@@ -85,7 +84,9 @@ export default function Skill({
       }}
       skill={skill}
       {...props}
-    >{`${skill}${formatNonEmptyStr(short, (short) => ` ${wrap(short)}`)}`}</BaseSkill>
+    >
+      {skill}
+    </BaseSkill>
   );
 }
 
@@ -126,7 +127,6 @@ type SkillsLinkProps = PropsWithSkill &
 export function SkillsLink({ format, skill, skills: skills_prop }: SkillsLinkProps) {
   format ||= (skill: string) => skill;
   const skills_set = new Set<SkillKey>(skills_prop || []).add(skill);
-  const short = skills[skill].short;
 
   return (
     <SkillsApplication
@@ -145,7 +145,7 @@ export function SkillsLink({ format, skill, skills: skills_prop }: SkillsLinkPro
       skill={skill}
       skills={skills_prop}
     >
-      {format(short || skill)}
+      {format(skill)}
     </SkillsApplication>
   );
 }
@@ -158,7 +158,7 @@ export function FrameworkLink({
     <SkillsLink
       skill={framework}
       skills={[frameworkable]}
-      format={(framework) => `${framework} ${wrap(skills[frameworkable].short || frameworkable)}`}
+      format={(framework) => `${framework} ${wrap(frameworkable)}`}
     />
   );
 }
