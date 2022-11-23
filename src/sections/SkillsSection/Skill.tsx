@@ -74,14 +74,14 @@ export default function Skill({
   ...props
 }: Omit<BaseSkillProps, "id" | "onBlur" | "onFocus" | "style">) {
   const id = skillId(skill);
+  const skill_applications = document.querySelectorAll(`[data-skills~=${id}]`);
 
   return (
     <BaseSkill
+      disabled={!skill_applications.length}
       id={id}
       onClick={() => {
-        document
-          .querySelectorAll(`[data-skills~=${id}]`)
-          .forEach((el) => tttSkill(el as HTMLElement, [], 3500));
+        skill_applications.forEach((el) => tttSkill(el as HTMLElement, [], 3500));
       }}
       skill={skill}
       {...props}

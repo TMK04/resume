@@ -49,15 +49,15 @@ export default function ExperienceSection() {
             </ol>
           </>,
           <>
-            Partnered with{" "}
+            {"Partnered with "}
             <Link
               className="fw-bold"
               href="https://www.klaytn.foundation"
               style={{ color: "#33201A" }}
             >
               Klaytn
-            </Link>{" "}
-            & deployed on their Blockchain
+            </Link>
+            {" & deployed on their Blockchain"}
           </>,
           <>
             {"Worked in a "}
