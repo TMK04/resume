@@ -9,7 +9,7 @@ export default function EducationSection() {
       <Subsection h3_props={{ children: "Temasek Polytechnic" }}>
         <H4>Diploma in Applied Artficial Intelligence</H4>
         <Time>Grad. April 2023 (expected)</Time>
-        School of Informatics & Information Technology
+        School of Informatics & IT
         <H5 className="text-accent">
           <ForwardSkillsApplication skill="High Achiever">
             Cum. GPA: 3.86 / 4.0
