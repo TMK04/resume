@@ -46,6 +46,10 @@ function App() {
             </H5>
           </div>
         </address>
+        <p className="mt-3 mx-auto raleway" id="objective">
+          To constantly learn and apply new knowledge at the frontier of AI, in order to produce
+          solutions for customers.
+        </p>
       </header>
       <Separator />
       <main className="d-block d-md-flex gap-5 mx-5">

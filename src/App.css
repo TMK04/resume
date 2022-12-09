@@ -16,3 +16,7 @@
 #top-aside {
   flex-grow: 1;
 }
+
+#objective {
+  width: 72%;
+}
