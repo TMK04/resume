@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import { H5 } from "./components/H";
 import Link from "./components/Link";
 import { NormalInline } from "./components/Normal";
@@ -14,6 +16,12 @@ import { SkillsApplication } from "./sections/SkillsSection/Skill";
 import "./App.css";
 
 function App() {
+  // Hacky initialization
+  const [, setState] = useState(0);
+  useEffect(() => {
+    setTimeout(() => setState(1), 0);
+  }, []);
+
   return (
     <div className="my-3">
       <header className="mx-5 text-center">
