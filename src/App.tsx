@@ -55,8 +55,8 @@ function App() {
           </div>
         </address>
         <p className="mt-3 mx-auto raleway" id="objective">
-          To constantly learn and apply new knowledge at the frontier of AI, in order to produce
-          solutions for customers.
+          To learn and apply new knowledge at the frontier of AI, in order to develop innovative
+          solutions for various industries and applications.
         </p>
       </header>
       <Separator />
