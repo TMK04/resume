@@ -1,3 +1,5 @@
+#!/bin/sh
+
 set -e
 yarn build
 gsutil -m rm -- gs://tmkhoa.com/** || :
