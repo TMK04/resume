@@ -10,7 +10,7 @@ export default function Split({
 }) {
   return (
     <div className="d-flex gap-5 split" {...props}>
-      <aside className="d-flex flex-column gap-3 split-aside">{aside_children}</aside>
+      <aside className="d-flex flex-column gap-2 split-aside">{aside_children}</aside>
       <article className="d-flex flex-column gap-3 split-article">{article_children}</article>
     </div>
   );
