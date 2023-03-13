@@ -98,7 +98,7 @@ type PropsWithSkills = {
 type SkillsApplicationProps = BaseSkillProps & PropsWithSkills;
 
 function frameworkSkills(skills_prop: SkillKey[] | undefined, skill: SkillKey) {
-  skills_prop ||= [];
+  skills_prop ||= [skill];
   const skills_set = new Set<SkillKey>(skills_prop).add(skill);
   for (const skill of skills_prop) {
     const framework_of = skills[skill].framework_of;
