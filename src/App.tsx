@@ -41,11 +41,11 @@ function App() {
               {"Digital Resume: "}
               <SkillsApplication skill="Cloud Technologies">
                 <NormalInline>
-                  <Link className="fw-bold" href="https://tmkhoa.com">
+                  <Link className="fw-bold" href="https://tmkhoa.netlify.app">
                     <PrintSwitch
-                      normal={{ children: "tmkhoa.com" }}
+                      normal={{ children: "tmkhoa.netlify.app" }}
                       print={{
-                        children: "https://tmkhoa.com"
+                        children: "tmkhoa.netlify.app"
                       }}
                     />
                   </Link>
