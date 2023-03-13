@@ -36,7 +36,8 @@ export default function ExperienceSection() {
           <FrameworkLink framework="React Native" frameworkable="TypeScript" />,
           <SkillsLink skill="CSS" />,
           <SkillsLink skill="Solidity" />,
-          <SkillsLink skill="Adobe XD" />
+          <SkillsLink skill="Adobe XD" />,
+          <SkillsLink skill="Git" />
         ]}
         time_props={{ children: "April 2022 - November 2022" }}
         actions={[
@@ -73,7 +74,10 @@ export default function ExperienceSection() {
         }}
         skills={[
           <FrameworkLink framework="React" frameworkable="TypeScript" />,
-          <SkillsLink skill="CSS" />
+          <SkillsLink skill="HTML" />,
+          <SkillsLink skill="CSS" />,
+          <SkillsLink skill="Adobe XD" />,
+          <SkillsLink skill="Git" />
         ]}
         time_props={{ children: "April 2022 - August 2022" }}
         actions={[
@@ -93,7 +97,10 @@ export default function ExperienceSection() {
           ),
           description: "Research Automation Tool"
         }}
-        skills={[<FrameworkLink framework="UiPath" frameworkable="Robotics Process Automation" />]}
+        skills={[
+          <FrameworkLink framework="UiPath" frameworkable="Robotics Process Automation" />,
+          <SkillsLink skill="Git" />
+        ]}
         time_props={{ children: "April 2022 - August 2022" }}
         actions={[
           <>
@@ -115,9 +122,9 @@ export default function ExperienceSection() {
           )
         }}
         skills={[
-          <SkillsLink format={(Python: string) => `${Python} Notebooks`} skill="Python" />,
-          <SkillsLink skill="Markdown" />,
-          <SkillsLink skill="HTML" />
+          <SkillsLink skill="Python Notebooks" />,
+          <SkillsLink skill="HTML" />,
+          <SkillsLink skill="Git" />
         ]}
         time_props={{ children: "May 2022 - August 2022" }}
         actions={[
@@ -145,8 +152,11 @@ export default function ExperienceSection() {
         }}
         skills={[
           <FrameworkLink framework="Web Components" frameworkable="TypeScript" />,
+          <SkillsLink skill="HTML" />,
           <SkillsLink skill="CSS" />,
-          <SkillsLink skill="MySQL" />
+          <SkillsLink skill="MySQL" />,
+          <SkillsLink skill="Adobe XD" />,
+          <SkillsLink skill="Git" />
         ]}
         time_props={{ children: "October 2021 - February 2022" }}
         actions={[
