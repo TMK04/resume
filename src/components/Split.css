@@ -1,0 +1,11 @@
+.split > * {
+  flex-basis: 10%;
+}
+
+.split-aside {
+  flex-grow: 1;
+}
+
+.split-article {
+  flex-grow: 2.5;
+}

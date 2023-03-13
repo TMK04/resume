@@ -5,6 +5,7 @@ import Link from "./components/Link";
 import { NormalInline } from "./components/Normal";
 import { PrintSwitch } from "./components/Print";
 import { Separator, SeparatorInline } from "./components/Separators";
+import Split from "./components/Split";
 import EducationSection from "./sections/EducationSection";
 import ExperienceSection from "./sections/ExperienceSection";
 import LinksSection from "./sections/LinksSection";
@@ -60,16 +61,30 @@ function App() {
         </p>
       </header>
       <Separator />
-      <main className="d-block d-md-flex gap-5 mx-5">
-        <aside className="d-flex flex-column gap-3" id="top-aside">
-          <EducationSection />
-          <LinksSection />
-          <SkillsSection />
-        </aside>
-        <article className="d-flex flex-column gap-3" id="top-article">
-          <ExperienceSection />
-          <LnASection />
-        </article>
+      <main className="d-flex flex-column gap-3 mx-5">
+        <Split
+          article_children={
+            <>
+              <ExperienceSection />
+            </>
+          }
+          aside_children={
+            <>
+              <EducationSection />
+              <LinksSection />
+              <SkillsSection />
+            </>
+          }
+        />
+        <Split
+          article_children={
+            <>
+              <LnASection />
+            </>
+          }
+          aside_children={<></>}
+          id="achievements"
+        />
       </main>
       <Separator />
       <footer className="mx-5">

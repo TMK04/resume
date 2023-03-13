@@ -1,23 +1,6 @@
-#top-article,
-#top-aside {
-  flex-basis: 10%;
-}
-
-#top-article {
-  flex-grow: 2;
-}
-
 @media print {
-  #top-article {
-    break-before: page;
-    padding-top: 2rem;
+  #achievements {
+    padding-top: 2%;
+    page-break-before: always;
   }
-}
-
-#top-aside {
-  flex-grow: 1;
-}
-
-#objective {
-  width: 72%;
 }
