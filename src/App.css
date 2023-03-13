@@ -10,6 +10,7 @@
 @media print {
   #top-article {
     break-before: page;
+    padding-top: 2rem;
   }
 }
 
