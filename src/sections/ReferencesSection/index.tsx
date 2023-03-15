@@ -8,7 +8,9 @@ export default function ReferencesSection() {
       <br />
       Course Chair, Diploma in Applied Artificial Intelligence, Temasek Polytechnic
       <br />
-      <Link href="mailto:tan_sio_poh@tp.edu.sg">tan_sio_poh@tp.edu.sg</Link>
+      <Link className="fw-bold" href="mailto:tan_sio_poh@tp.edu.sg">
+        tan_sio_poh@tp.edu.sg
+      </Link>
     </Subsection>
   );
 }

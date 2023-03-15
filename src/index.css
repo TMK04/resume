@@ -58,6 +58,7 @@
   --bs-dark-rgb: var(--dark);
   --bs-light-rgb: var(--light);
   --bs-black-rgb: var(--text);
+  --bs-link-color: #4f58fe;
 }
 
 @media print {
@@ -90,6 +91,10 @@ ul {
 
 .cursor-help {
   cursor: help !important;
+}
+
+.fw-800 {
+  font-weight: 800 !important;
 }
 
 .info:hover {
