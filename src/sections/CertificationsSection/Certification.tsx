@@ -1,30 +1,30 @@
-import type { ReactNode } from "react";
+import Link, { type LinkProps } from "../../components/Link";
+import { SkillsApplicationLink, type SkillsApplicationLinkProps } from "../SkillsSection/Skill";
 
-import Link from "../../components/Link";
-import { ForwardSkillsApplication, SkillsApplicationProps } from "../SkillsSection/Skill";
-
-type CertificationProps = Omit<Parameters<typeof Link>[0], "className">;
-export default function Certification(props: CertificationProps) {
-  return <Link className="fw-bold" {...props} />;
+export function SkillsCertification(props: Omit<SkillsApplicationLinkProps, "children">) {
+  return <SkillsApplicationLink {...props}>{props.sa_props.skill}</SkillsApplicationLink>;
 }
 
-export function SkillCertification<
-  T extends {
-    certificationFn: (children: ReactNode) => JSX.Element;
-    fsa_props: SkillsApplicationProps;
-  }
->({ certificationFn, fsa_props }: T) {
+export function CodecademyCertification({ href, ...props }: LinkProps) {
   return (
-    <ForwardSkillsApplication {...fsa_props}>
-      {certificationFn(fsa_props.skill)}
-    </ForwardSkillsApplication>
+    <Link
+      className="fw-bold"
+      href={`https://www.codecademy.com/profiles/floer.learner/certificates/${href}`}
+      {...props}
+    />
   );
 }
 
-export function CodecademyCertification({ href, ...props }: CertificationProps) {
+export function CodecademySkillsCertification({
+  link_props: { href, ...link_props },
+  ...props
+}: SkillsApplicationLinkProps) {
   return (
-    <Certification
-      href={`https://www.codecademy.com/profiles/floer.learner/certificates/${href}`}
+    <SkillsCertification
+      link_props={{
+        href: `https://www.codecademy.com/profiles/floer.learner/certificates/${href}`,
+        ...link_props
+      }}
       {...props}
     />
   );

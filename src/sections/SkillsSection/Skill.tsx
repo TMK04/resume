@@ -130,14 +130,15 @@ export function SkillsApplication({
   );
 }
 
+export type SkillsApplicationLinkProps = PropsWithChildren<{
+  link_props: Omit<LinkProps, "children">;
+  sa_props: Omit<SkillsApplicationProps, "children" | "color">;
+}>;
 export function SkillsApplicationLink({
   children,
   link_props,
   sa_props
-}: PropsWithChildren<{
-  link_props: Omit<LinkProps, "children">;
-  sa_props: Omit<SkillsApplicationProps, "children" | "color">;
-}>) {
+}: SkillsApplicationLinkProps) {
   return (
     <Link {...link_props}>
       <SkillsApplication className="fw-bold" color="var(--bs-link-color)" {...sa_props}>
