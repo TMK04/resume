@@ -129,15 +129,17 @@ export default function ExperienceSection() {
         time_props={{ children: "May 2022 - August 2022" }}
         actions={[
           <>
-            {"Experimented with more than 6 "}
-            <SkillsLink skill="Data Science & Machine Learning" />
-            {" models to predict annual salaries in the field of Data Science"}
+            {"Experimented with "}
+            <SkillsLink
+              format={() =>
+                "Regressions, Support Vector Machines, Regularization, & other ML techniques"
+              }
+              skill="Data Science & Machine Learning"
+            />
+            {" to predict annual salaries in the field of Data Science"}
           </>,
           <>
-            Followed the{" "}
-            <ForwardSkillsApplication skill="Systematic">
-              CRISP-DM Framework
-            </ForwardSkillsApplication>
+            Followed the <SkillsLink format={() => "CRISP-DM Framework"} skill="Systematic" />
           </>
         ]}
       />
