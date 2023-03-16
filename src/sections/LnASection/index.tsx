@@ -9,15 +9,20 @@ export default function LnASection() {
           <tr>
             <th>2022</th>
             <td>
+              <Link href="https://certificates.aisingapore.org/certificate-verification/87767-853DB-8048F">
+                Participation Award
+              </Link>
+            </td>
+            <td>National AI Student Challenge 2022</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>
               6<sup>th</sup>/137 teams
               <br />1<sup>st</sup>/14 teams in Category
             </td>
             <td>
-              <Link
-                className="fw-bold text-accent"
-                id="lna-pf100"
-                href="http://polyfintech100hackathon.sg"
-              >
+              <Link id="lna-pf100" href="http://polyfintech100hackathon.sg">
                 PolyFinTech 100 API Hackathon
               </Link>
               <br />
