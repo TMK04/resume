@@ -6,6 +6,7 @@ import { NormalInline } from "./components/Normal";
 import { PrintSwitch } from "./components/Print";
 import { Separator, SeparatorInline } from "./components/Separators";
 import Split from "./components/Split";
+import CertificationsSection from "./sections/CertificationsSection";
 import EducationSection from "./sections/EducationSection";
 import ExperienceSection from "./sections/ExperienceSection";
 import LinksSection from "./sections/LinksSection";
@@ -82,7 +83,11 @@ function App() {
               <LnASection />
             </>
           }
-          aside_children={<></>}
+          aside_children={
+            <>
+              <CertificationsSection />
+            </>
+          }
           id="achievements"
         />
       </main>

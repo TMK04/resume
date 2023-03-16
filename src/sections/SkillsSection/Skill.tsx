@@ -95,7 +95,7 @@ type PropsWithSkills = {
   skills?: SkillKey[];
 };
 
-type SkillsApplicationProps = BaseSkillProps & PropsWithSkills;
+export type SkillsApplicationProps = BaseSkillProps & PropsWithSkills;
 
 function frameworkSkills(skills_prop: SkillKey[] | undefined, skill: SkillKey) {
   skills_prop ||= [skill];
