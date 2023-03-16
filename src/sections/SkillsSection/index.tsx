@@ -22,6 +22,8 @@ export default function SkillsSection() {
       }}
     >
       <Subsection h3_props={{ children: "Competencies" }}>
+        <Skill className="d-block" skill="Natural Language Processing" />
+        <Skill className="d-block" skill="Image Classification" />
         <Skill className="d-block" skill="Data Science & Machine Learning" />
         <Skill className="d-block" skill="Robotics Process Automation" />
         <Skill className="d-block" skill="Cloud Technologies" />
