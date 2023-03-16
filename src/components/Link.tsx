@@ -1,11 +1,7 @@
 import { formatNonEmptyClassName } from "../helpers";
 
-export default function Link({
-  children,
-  className,
-  target,
-  ...props
-}: JSX.IntrinsicElements["a"]) {
+export type LinkProps = JSX.IntrinsicElements["a"];
+export default function Link({ children, className, target, ...props }: LinkProps) {
   return (
     <a
       className={`info text-decoration-none${formatNonEmptyClassName(className)}`}

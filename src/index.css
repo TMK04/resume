@@ -113,6 +113,10 @@ ul {
   color: rgb(var(--info)) !important;
 }
 
+.text-link {
+  color: rgb(var(--bs-link-color)) !important;
+}
+
 .text-gradient {
   color: var(--color-1);
 }

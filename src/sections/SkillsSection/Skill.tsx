@@ -1,3 +1,6 @@
+import { PropsWithChildren } from "react";
+
+import Link, { LinkProps } from "../../components/Link";
 import { formatNonEmptyClassName } from "../../helpers";
 
 import untyped_skills from "./skills.json";
@@ -51,8 +54,8 @@ type PropsWithSkill = {
 type BaseSkillProps = Omit<JSX.IntrinsicElements["button"], "onBlur" | "onFocus" | "style"> &
   PropsWithSkill;
 
-function BaseSkill({ className, skill, ...props }: BaseSkillProps) {
-  const skill_color = skills[skill].color || "rgb(var(--text))";
+function BaseSkill({ className, color, skill, ...props }: BaseSkillProps) {
+  color ||= skills[skill].color || "rgb(var(--text))";
 
   return (
     <button
@@ -60,8 +63,8 @@ function BaseSkill({ className, skill, ...props }: BaseSkillProps) {
         " "
       )}${formatNonEmptyClassName(className)}`}
       style={{
-        backgroundColor: skill_color,
-        color: skill_color,
+        backgroundColor: color,
+        color,
         padding: "0 0.18rem"
       }}
       {...props}
@@ -127,13 +130,26 @@ export function SkillsApplication({
   );
 }
 
-export function ForwardSkillsApplication({
+export function SkillsApplicationLink({
   children,
-  className,
-  ...props
-}: SkillsApplicationProps) {
+  link_props,
+  sa_props
+}: PropsWithChildren<{
+  link_props: Omit<LinkProps, "children">;
+  sa_props: Omit<SkillsApplicationProps, "children" | "color">;
+}>) {
   return (
-    <SkillsApplication className={`cursor-default${formatNonEmptyClassName(className)}`} {...props}>
+    <Link {...link_props}>
+      <SkillsApplication className="fw-bold" color="var(--bs-link-color)" {...sa_props}>
+        {children}
+      </SkillsApplication>
+    </Link>
+  );
+}
+
+export function ForwardSkillsApplication({ children, ...props }: SkillsApplicationProps) {
+  return (
+    <SkillsApplication disabled {...props}>
       <strong>{children}</strong>
     </SkillsApplication>
   );

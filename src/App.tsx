@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import { H5 } from "./components/H";
 import Link from "./components/Link";
-import { NormalInline } from "./components/Normal";
 import { PrintSwitch } from "./components/Print";
 import { Separator, SeparatorInline } from "./components/Separators";
 import Split from "./components/Split";
@@ -13,7 +12,7 @@ import LinksSection from "./sections/LinksSection";
 import LnASection from "./sections/LnASection";
 import ReferencesSection from "./sections/ReferencesSection";
 import SkillsSection from "./sections/SkillsSection";
-import { SkillsApplication } from "./sections/SkillsSection/Skill";
+import { SkillsApplicationLink } from "./sections/SkillsSection/Skill";
 
 import "./App.css";
 
@@ -41,18 +40,17 @@ function App() {
           <div>
             <H5>
               {"Digital Resume: "}
-              <SkillsApplication skill="Cloud Technologies">
-                <NormalInline>
-                  <Link className="fw-bold" href="https://tmkhoa.netlify.app">
-                    <PrintSwitch
-                      normal={{ children: "tmkhoa.netlify.app" }}
-                      print={{
-                        children: "tmkhoa.netlify.app"
-                      }}
-                    />
-                  </Link>
-                </NormalInline>
-              </SkillsApplication>
+              <SkillsApplicationLink
+                link_props={{ href: "https://tmkhoa.netlify.app" }}
+                sa_props={{ skill: "Cloud Technologies" }}
+              >
+                <PrintSwitch
+                  normal={{ children: "tmkhoa.netlify.app" }}
+                  print={{
+                    children: "tmkhoa.netlify.app"
+                  }}
+                />
+              </SkillsApplicationLink>
             </H5>
           </div>
         </address>
