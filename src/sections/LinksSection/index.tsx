@@ -1,4 +1,5 @@
 import Link from "../../components/Link";
+import Logo from "../../components/Logo";
 import { PrintSwitch } from "../../components/Print";
 import { Section } from "../../components/Section";
 
@@ -9,30 +10,34 @@ export default function LinksSection() {
   return (
     <Section className="mb-2" h2_props={{ children: "Links" }}>
       <address>
-        <div>
-          <span className="fw-800">
-            GitHub:
-            <PrintSwitch normal={{ children: "//" }} print={{ children: " " }} />
-          </span>
+        <span className="align-middle d-block fw-800">
+          <Logo alt="GitHub" src="res/github.svg" />
           <Link className="raleway" href="https://github.com/TMK04">
-            <PrintSwitch
-              normal={{ children: github_profile }}
-              print={{ children: <>github.com/{github_profile}</> }}
-            />
+            <span className="fw-bold text-body">
+              <PrintSwitch
+                normal={{
+                  children: "GitHub://"
+                }}
+                print={{ children: " github.com/" }}
+              />
+            </span>
+            {github_profile}
           </Link>
-        </div>
-        <div>
-          <span className="fw-800">
-            LinkedIn:
-            <PrintSwitch normal={{ children: "//" }} print={{ children: " " }} />
-          </span>
+        </span>
+        <span className="align-middle d-block fw-800">
+          <Logo alt="LinkedIn" src="res/linkedin.png" />
           <Link className="raleway" href="https://linkedin.com/in/tmk04">
-            <PrintSwitch
-              normal={{ children: linkedin_profile }}
-              print={{ children: <>linkedin.com/in/{linkedin_profile}</> }}
-            />
+            <span className="fw-bold text-body">
+              <PrintSwitch
+                normal={{
+                  children: "LinkedIn://"
+                }}
+                print={{ children: " linkedin.com/in/" }}
+              />
+            </span>
+            {linkedin_profile}
           </Link>
-        </div>
+        </span>
       </address>
     </Section>
   );
