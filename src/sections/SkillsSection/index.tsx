@@ -48,7 +48,7 @@ export default function SkillsSection() {
             <Skill skill="React Native" />,
             <Skill skill="Web Components" />,
             <Skill skill="UiPath" />,
-            <Skill skill="MySQL" />,
+            <Skill skill="SQL" />,
             <Skill skill="Java" />,
             <Skill skill="XML" />,
             <i>

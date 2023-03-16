@@ -156,7 +156,7 @@ export default function ExperienceSection() {
           <FrameworkLink framework="Web Components" frameworkable="TypeScript" />,
           <SkillsLink skill="HTML" />,
           <SkillsLink skill="CSS" />,
-          <SkillsLink skill="MySQL" />,
+          <SkillsLink skill="SQL" />,
           <SkillsLink skill="Adobe XD" />,
           <SkillsLink skill="Git" />
         ]}
