@@ -73,9 +73,7 @@ export default function SkillsSection() {
         </H5>
         <H5>
           <Skill className="fw-bold" skill="Never-ending Curiosity" />:
-          <NormalInline>
-            {" Willing to "}learn{", Loves asking questions, & Enjoys doing research"}
-          </NormalInline>
+          <NormalInline> Loves asking questions, enjoys research</NormalInline>
         </H5>
         <H5>
           <Skill className="fw-bold" skill="Systematic" />:
