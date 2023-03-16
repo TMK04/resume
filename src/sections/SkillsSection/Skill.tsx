@@ -56,9 +56,9 @@ function BaseSkill({ className, skill, ...props }: BaseSkillProps) {
 
   return (
     <button
-      className={`border-0 rounded-1 skill ${INITIAL_CLASS_LIST.join(" ")}${formatNonEmptyClassName(
-        className
-      )}`}
+      className={`border-0 rounded-1 skill text-start ${INITIAL_CLASS_LIST.join(
+        " "
+      )}${formatNonEmptyClassName(className)}`}
       style={{
         backgroundColor: skill_color,
         color: skill_color,
