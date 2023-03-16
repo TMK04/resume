@@ -157,7 +157,7 @@ export function SkillsLink({ format, skill, skills: skills_prop }: SkillsLinkPro
             const el = document.getElementById(skillId(skill));
             if (el) {
               el.focus();
-              tttSkill(el, ["fw-bold"], 1500);
+              tttSkill(el, el.classList.contains("fw-bold") ? [] : ["fw-bold"], 1500);
             }
           })
         )
