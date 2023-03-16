@@ -1,5 +1,6 @@
 import BulletList from "../../components/BulletList";
 import { Section } from "../../components/Section";
+import { SkillsApplicationLink } from "../SkillsSection/Skill";
 
 import { CodecademyCertification, CodecademySkillsCertification } from "./Certification";
 
@@ -15,6 +16,14 @@ export default function CertificationsSection() {
             link_props={{ href: "9eb0741e5ebef1f9f58a53bfac67d3a7" }}
             sa_props={{ skill: "HTML" }}
           />,
+          <SkillsApplicationLink
+            link_props={{
+              href: "https://learn.aisingapore.org/certificate-verification/81539CA35C-7EED902249-12D361128"
+            }}
+            sa_props={{ skill: "Data Science & Machine Learning" }}
+          >
+            Literacy in AI
+          </SkillsApplicationLink>,
           <CodecademySkillsCertification
             link_props={{ href: "b3dec49423da50603c25618aee635027" }}
             sa_props={{ skill: "CSS" }}
