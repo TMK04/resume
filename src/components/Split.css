@@ -9,3 +9,9 @@
 .split-article {
   flex-grow: 2.5;
 }
+
+@media print {
+  .split {
+    flex-direction: row !important;
+  }
+}
