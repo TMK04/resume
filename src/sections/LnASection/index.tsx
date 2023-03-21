@@ -7,16 +7,20 @@ export default function LnASection() {
       <table className="table table-hover table-striped">
         <tbody>
           <tr>
-            <th>2022</th>
+            <th>2023</th>
             <td>
               <Link href="https://certificates.aisingapore.org/certificate-verification/87767-853DB-8048F">
                 Participation Award
               </Link>
             </td>
-            <td>National AI Student Challenge 2022</td>
+            <td id="naisc">
+              <Link href="https://learn.aisingapore.org/national-ai-student-challenge-2022">
+                National AI Student Challenge 2022
+              </Link>
+            </td>
           </tr>
           <tr>
-            <th></th>
+            <th>2022</th>
             <td>
               6<sup>th</sup>/137 teams
               <br />1<sup>st</sup>/14 teams in Category

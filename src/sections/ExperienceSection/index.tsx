@@ -26,6 +26,24 @@ export default function ExperienceSection() {
       <Experience
         h3_props={{
           children: (
+            <Link className="text-accent" href="#naisc" target="_self">
+              National AI Student Challenge
+            </Link>
+          )
+        }}
+        skills={[
+          <SkillsLink skill="Natural Language Processing" />,
+          <SkillsLink skill="Image Classification" />,
+          <SkillsLink skill="Python" />,
+          <FrameworkLink framework="React" frameworkable="TypeScript" />,
+          <SkillsLink skill="Git" />
+        ]}
+        time_props={{ children: "January 2023 - March 2023" }}
+        actions={[]}
+      />
+      <Experience
+        h3_props={{
+          children: (
             <Link className="text-accent" href="#lna-pf100" target="_self">
               PolyFinTech 100 API Hackathon
             </Link>
