@@ -38,7 +38,7 @@ export default function ExperienceSection() {
           <FrameworkLink framework="React" frameworkable="TypeScript" />,
           <SkillsLink skill="Git" />
         ]}
-        time_props={{ children: "January 2023 - March 2023" }}
+        time_props={{ children: "January - March 2023" }}
         actions={[]}
       />
       <Experience
@@ -57,7 +57,7 @@ export default function ExperienceSection() {
           <SkillsLink skill="Adobe XD" />,
           <SkillsLink skill="Git" />
         ]}
-        time_props={{ children: "April 2022 - November 2022" }}
+        time_props={{ children: "April - November 2022" }}
         actions={[
           <>
             Created & deployed a <b>Web3-powered</b> ecosystem featuring:
@@ -97,7 +97,7 @@ export default function ExperienceSection() {
           <SkillsLink skill="Adobe XD" />,
           <SkillsLink skill="Git" />
         ]}
-        time_props={{ children: "April 2022 - August 2022" }}
+        time_props={{ children: "April - August 2022" }}
         actions={[
           <>
             {"Set up Elastic Beanstalk, Lambda, S3, & other services on "}
@@ -119,7 +119,7 @@ export default function ExperienceSection() {
           <FrameworkLink framework="UiPath" frameworkable="Robotics Process Automation" />,
           <SkillsLink skill="Git" />
         ]}
-        time_props={{ children: "April 2022 - August 2022" }}
+        time_props={{ children: "April - August 2022" }}
         actions={[
           <>
             Automated <em>Keyword Extraction</em> & <em>Outsourcing of References</em>
@@ -144,7 +144,7 @@ export default function ExperienceSection() {
           <SkillsLink skill="HTML" />,
           <SkillsLink skill="Git" />
         ]}
-        time_props={{ children: "May 2022 - August 2022" }}
+        time_props={{ children: "May - August 2022" }}
         actions={[
           <>
             {"Experimented with "}
