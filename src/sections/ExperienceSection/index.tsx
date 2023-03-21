@@ -26,8 +26,8 @@ export default function ExperienceSection() {
       <Experience
         h3_props={{
           children: (
-            <Link className="text-accent" href="#naisc" target="_self">
-              National AI Student Challenge
+            <Link className="text-accent" href="#naisc-2022" target="_self">
+              National AI Student Challenge 2022
             </Link>
           )
         }}
@@ -44,7 +44,7 @@ export default function ExperienceSection() {
       <Experience
         h3_props={{
           children: (
-            <Link className="text-accent" href="#lna-pf100" target="_self">
+            <Link className="text-accent" href="#lna-pf100-2022" target="_self">
               PolyFinTech 100 API Hackathon
             </Link>
           )

@@ -13,7 +13,7 @@ export default function LnASection() {
                 Participation Award
               </Link>
             </td>
-            <td id="naisc">
+            <td id="naisc-2022">
               <Link href="https://learn.aisingapore.org/national-ai-student-challenge-2022">
                 National AI Student Challenge 2022
               </Link>
@@ -26,8 +26,8 @@ export default function LnASection() {
               <br />1<sup>st</sup>/14 teams in Category
             </td>
             <td>
-              <Link id="lna-pf100" href="http://polyfintech100hackathon.sg">
-                PolyFinTech 100 API Hackathon
+              <Link id="lna-pf100-2022" href="http://polyfintech100hackathon.sg">
+                PolyFinTech 100 API Hackathon 2022
               </Link>
               <br />
               Category: Creator Economy (Team Mala)
