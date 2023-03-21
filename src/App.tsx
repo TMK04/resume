@@ -62,30 +62,39 @@ function App() {
       <Separator />
       <main className="d-flex flex-column gap-3 mx-5">
         <Split
-          article_children={
-            <>
-              <ExperienceSection />
-            </>
-          }
-          aside_children={
-            <>
-              <EducationSection />
-              <LinksSection />
-              <SkillsSection />
-            </>
-          }
+          article_props={{
+            children: (
+              <>
+                <ExperienceSection />
+              </>
+            )
+          }}
+          aside_props={{
+            children: (
+              <>
+                <EducationSection />
+                <LinksSection />
+                <SkillsSection />
+              </>
+            )
+          }}
         />
         <Split
-          article_children={
-            <>
-              <LnASection />
-            </>
-          }
-          aside_children={
-            <>
-              <CertificationsSection />
-            </>
-          }
+          article_props={{
+            children: (
+              <>
+                <LnASection />
+              </>
+            )
+          }}
+          aside_props={{
+            children: (
+              <>
+                <CertificationsSection />
+              </>
+            ),
+            id: "certifications-section"
+          }}
           id="achievements"
         />
       </main>

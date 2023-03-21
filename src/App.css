@@ -1,3 +1,7 @@
+#certifications-section {
+  order: 1;
+}
+
 @media print {
   #achievements {
     padding-top: 2%;
