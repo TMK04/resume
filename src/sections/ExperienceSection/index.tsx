@@ -39,13 +39,25 @@ export default function ExperienceSection() {
           <SkillsLink skill="Git" />
         ]}
         time_props={{ children: "January - March 2023" }}
-        actions={[]}
+        actions={[
+          <>
+            Trained a <SkillsLink format={() => "CNN"} skill="Image Classification" /> to identify
+            food types
+          </>,
+          <>Developed a dashboard for users to track nutritional information</>,
+          <>
+            Created {"a "}
+            <SkillsLink format={() => "chatbot"} skill="Natural Language Processing" /> {"with "}
+            <SkillsLink format={() => "AWS Lex"} skill="Cloud Technologies" /> to suggest healthy
+            foods based on user's intake
+          </>
+        ]}
       />
       <Experience
         h3_props={{
           children: (
             <Link className="text-accent" href="#lna-pf100-2022" target="_self">
-              PolyFinTech 100 API Hackathon
+              PolyFinTech 100 API Hackathon 2022
             </Link>
           )
         }}
@@ -80,8 +92,8 @@ export default function ExperienceSection() {
           </>,
           <>
             {"Worked in a "}
-            <ForwardSkillsApplication skill="Team Player">team of 6</ForwardSkillsApplication> using
-            Git, Discord, & Remnote to organize code, communication, & knowledge respectively
+            <SkillsLink format={() => "team of 6"} skill="Team Player" /> using Git, Discord, &
+            Remnote to organize code, communication, & knowledge respectively
           </>
         ]}
       />
@@ -101,7 +113,7 @@ export default function ExperienceSection() {
         actions={[
           <>
             {"Set up Elastic Beanstalk, Lambda, S3, & other services on "}
-            <SkillsLink format={() => "AWS Cloud"} skill="Cloud Technologies" />
+            <SkillsLink format={() => "AWS"} skill="Cloud Technologies" />
           </>,
           <>Incorporated both Fulltext & Tag-based search</>
         ]}
