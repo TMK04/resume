@@ -22,11 +22,15 @@ export default function SkillsSection() {
       }}
     >
       <Subsection h3_props={{ children: "Competencies" }}>
-        <Skill className="d-block" skill="Natural Language Processing" />
-        <Skill className="d-block" skill="Image Classification" />
         <Skill className="d-block" skill="Data Science & Machine Learning" />
-        <Skill className="d-block" skill="Robotics Process Automation" />
+        <Skill className="ms-1 d-block" skill="Computer Vision" />
+        <Skill className="ms-2 d-block" skill="Image Classification" />
+        <Skill className="ms-2 d-block" skill="Object Detection" />
+        <Skill className="ms-1 d-block" skill="Re-identification" />
+        <Skill className="ms-1 d-block" skill="Natural Language Processing" />
+        <Skill className="ms-1 d-block" skill="Automatic Speech Recognition" />
         <Skill className="d-block" skill="Cloud Technologies" />
+        <Skill className="d-block" skill="Robotics Process Automation" />
       </Subsection>
       <Subsection h3_props={{ children: "Languages & Tools" }}>
         <H5 id="skills-lnt-5000">Over 5000 lines:</H5>

@@ -9,6 +9,17 @@ export default function LnASection() {
           <tr>
             <th>2023</th>
             <td>
+              8<sup>th</sup>/31 teams in Computer Vision
+            </td>
+            <td id="brainhack-2023">
+              <Link href="https://zindi.africa/competitions/brainhack-til-23-advanced-cv/leaderboard">
+                DSTA BrainHack 2023 (Today I Learned &#8212; AI Camp)
+              </Link>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>
               <Link href="https://certificates.aisingapore.org/certificate-verification/87767-853DB-8048F">
                 Participation Award
               </Link>

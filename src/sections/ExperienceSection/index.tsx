@@ -26,6 +26,57 @@ export default function ExperienceSection() {
       <Experience
         h3_props={{
           children: (
+            <Link className="text-accent" href="#brainhack-2023" target="_self">
+              DSTA BrainHack 2023 (Today I Learned &#8212; AI Camp)
+            </Link>
+          )
+        }}
+        skills={[
+          <SkillsLink skill="Object Detection" />,
+          <SkillsLink skill="Re-identification" />,
+          <SkillsLink skill="Automatic Speech Recognition" />,
+          <SkillsLink skill="Python Notebooks" />,
+          <SkillsLink skill="Git" />
+        ]}
+        time_props={{ children: "May 2023" }}
+        actions={[
+          <>
+            {"Trained a "}
+            <ForwardSkillsApplication skill="Object Detection">
+              <Link href="https://github.com/ultralytics/ultralytics">YOLO model</Link>
+            </ForwardSkillsApplication>
+            {" to detect plushies from an image"}
+          </>,
+          <>
+            Constructed a{" "}
+            <ForwardSkillsApplication skill="Re-identification">
+              <Link href="https://en.wikipedia.org/wiki/Siamese_neural_network">
+                Siamese Network
+              </Link>
+            </ForwardSkillsApplication>
+            {" with a "}
+            <ForwardSkillsApplication skill="Data Science & Machine Learning">
+              <Link href="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)">
+                Transformer Encoder
+              </Link>
+            </ForwardSkillsApplication>
+            {", then trained it with "}
+            <ForwardSkillsApplication skill="Data Science & Machine Learning">
+              <Link href="https://en.wikipedia.org/wiki/Triplet_loss">Triplet Loss</Link>
+            </ForwardSkillsApplication>
+          </>,
+          <>
+            Passed detections from YOLO model into Siamese Network to identify "terrorist" plushies
+          </>,
+          <>
+            Trained an <SkillsLink skill="Automatic Speech Recognition" /> model to transcribe{" "}
+            <em>augmented</em> audio into text
+          </>
+        ]}
+      />
+      <Experience
+        h3_props={{
+          children: (
             <Link className="text-accent" href="#naisc-2022" target="_self">
               National AI Student Challenge 2022
             </Link>
@@ -41,15 +92,20 @@ export default function ExperienceSection() {
         time_props={{ children: "January - March 2023" }}
         actions={[
           <>
-            Trained a <SkillsLink format={() => "CNN"} skill="Image Classification" /> to identify
-            food types
+            Trained a{" "}
+            <ForwardSkillsApplication skill="Image Classification">
+              <Link href="https://en.wikipedia.org/wiki/Convolutional_neural_network">CNN</Link>
+            </ForwardSkillsApplication>
+            {" to identify food types"}
           </>,
           <>Developed a dashboard for users to track nutritional information</>,
           <>
             Created {"a "}
             <SkillsLink format={() => "chatbot"} skill="Natural Language Processing" /> {"with "}
-            <SkillsLink format={() => "AWS Lex"} skill="Cloud Technologies" /> to suggest healthy
-            foods based on user's intake
+            <ForwardSkillsApplication skill="Cloud Technologies">
+              <Link href="https://aws.amazon.com/lex">AWS Lex</Link>
+            </ForwardSkillsApplication>{" "}
+            to suggest healthy foods based on user's intake
           </>
         ]}
       />
@@ -113,7 +169,9 @@ export default function ExperienceSection() {
         actions={[
           <>
             {"Set up Elastic Beanstalk, Lambda, S3, & other services on "}
-            <SkillsLink format={() => "AWS"} skill="Cloud Technologies" />
+            <ForwardSkillsApplication skill="Cloud Technologies">
+              <Link href="https://aws.amazon.com">AWS</Link>
+            </ForwardSkillsApplication>
           </>,
           <>Incorporated both Fulltext & Tag-based search</>
         ]}
