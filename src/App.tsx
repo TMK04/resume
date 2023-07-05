@@ -34,8 +34,8 @@ function App() {
             t.m.khoa.2308@gmail.com
           </Link>
           <SeparatorInline className="fw-bold">|</SeparatorInline>
-          <Link className="fw-bold raleway text-secondary" href="tel:+6580138550">
-            +65 8013 8550
+          <Link className="fw-bold raleway text-secondary" href="tel:(+65)80138550">
+            (+65)80138550
           </Link>
           <div>
             <H5>
