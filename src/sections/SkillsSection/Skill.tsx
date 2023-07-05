@@ -100,15 +100,23 @@ type PropsWithSkills = {
 
 export type SkillsApplicationProps = BaseSkillProps & PropsWithSkills;
 
+function addFrameworks(skills_set: Set<SkillKey>, framework_of: SkillKey[]) {
+  for (const frameworkable of framework_of) {
+    skills_set.add(frameworkable);
+    const framework_of = skills[frameworkable].framework_of;
+    if (framework_of) {
+      addFrameworks(skills_set, framework_of);
+    }
+  }
+}
+
 function frameworkSkills(skills_prop: SkillKey[] | undefined, skill: SkillKey) {
   skills_prop ||= [skill];
   const skills_set = new Set<SkillKey>(skills_prop).add(skill);
   for (const skill of skills_prop) {
     const framework_of = skills[skill].framework_of;
     if (framework_of) {
-      for (const frameworkable of framework_of) {
-        skills_set.add(frameworkable);
-      }
+      addFrameworks(skills_set, framework_of);
     }
   }
   return skills_set;
