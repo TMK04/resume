@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import { H5 } from "./components/H";
 import Link from "./components/Link";
-import { PrintSwitch } from "./components/Print";
 import { Separator, SeparatorInline } from "./components/Separators";
 import Split from "./components/Split";
 import CertificationsSection from "./sections/CertificationsSection";
@@ -44,12 +43,7 @@ function App() {
                 link_props={{ href: "https://tmkhoa.netlify.app" }}
                 sa_props={{ skill: "Cloud Technologies" }}
               >
-                <PrintSwitch
-                  normal={{ children: "tmkhoa.netlify.app" }}
-                  print={{
-                    children: "tmkhoa.netlify.app"
-                  }}
-                />
+                tmkhoa.netlify.app
               </SkillsApplicationLink>
             </H5>
           </div>

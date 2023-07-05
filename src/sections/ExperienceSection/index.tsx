@@ -5,6 +5,7 @@ import {
   ForwardSkillsApplication,
   FrameworkLink,
   SkillsApplication,
+  SkillsApplicationLink,
   SkillsLink
 } from "../SkillsSection/Skill";
 
@@ -42,28 +43,38 @@ export default function ExperienceSection() {
         actions={[
           <>
             {"Trained a "}
-            <ForwardSkillsApplication skill="Object Detection">
-              <Link href="https://github.com/ultralytics/ultralytics">YOLO model</Link>
-            </ForwardSkillsApplication>
+            <SkillsApplicationLink
+              link_props={{ href: "https://github.com/ultralytics/ultralytics" }}
+              sa_props={{ skill: "Object Detection" }}
+            >
+              YOLO model
+            </SkillsApplicationLink>
             {" to detect plushies from an image"}
           </>,
           <>
-            Constructed a{" "}
-            <ForwardSkillsApplication skill="Re-identification">
-              <Link href="https://en.wikipedia.org/wiki/Siamese_neural_network">
-                Siamese Network
-              </Link>
-            </ForwardSkillsApplication>
+            {"Constructed a "}
+            <SkillsApplicationLink
+              link_props={{ href: "https://en.wikipedia.org/wiki/Siamese_neural_network" }}
+              sa_props={{ skill: "Re-identification" }}
+            >
+              Siamese Network
+            </SkillsApplicationLink>
             {" with a "}
-            <ForwardSkillsApplication skill="Data Science & Machine Learning">
-              <Link href="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)">
-                Transformer Encoder
-              </Link>
-            </ForwardSkillsApplication>
+            <SkillsApplicationLink
+              link_props={{
+                href: "https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)"
+              }}
+              sa_props={{ skill: "Data Science & Machine Learning" }}
+            >
+              Transformer Encoder
+            </SkillsApplicationLink>
             {", then trained it with "}
-            <ForwardSkillsApplication skill="Data Science & Machine Learning">
-              <Link href="https://en.wikipedia.org/wiki/Triplet_loss">Triplet Loss</Link>
-            </ForwardSkillsApplication>
+            <SkillsApplicationLink
+              link_props={{ href: "https://en.wikipedia.org/wiki/Triplet_loss" }}
+              sa_props={{ skill: "Data Science & Machine Learning" }}
+            >
+              Triplet Loss
+            </SkillsApplicationLink>
           </>,
           <>
             Passed detections from YOLO model into Siamese Network to identify "terrorist" plushies
@@ -92,20 +103,26 @@ export default function ExperienceSection() {
         time_props={{ children: "January - March 2023" }}
         actions={[
           <>
-            Trained a{" "}
-            <ForwardSkillsApplication skill="Image Classification">
-              <Link href="https://en.wikipedia.org/wiki/Convolutional_neural_network">CNN</Link>
-            </ForwardSkillsApplication>
+            {"Trained a "}
+            <SkillsApplicationLink
+              link_props={{ href: "https://en.wikipedia.org/wiki/Convolutional_neural_network" }}
+              sa_props={{ skill: "Image Classification" }}
+            >
+              CNN
+            </SkillsApplicationLink>
             {" to identify food types"}
           </>,
           <>Developed a dashboard for users to track nutritional information</>,
           <>
             Created {"a "}
             <SkillsLink format={() => "chatbot"} skill="Natural Language Processing" /> {"with "}
-            <ForwardSkillsApplication skill="Cloud Technologies">
-              <Link href="https://aws.amazon.com/lex">AWS Lex</Link>
-            </ForwardSkillsApplication>{" "}
-            to suggest healthy foods based on user's intake
+            <SkillsApplicationLink
+              link_props={{ href: "https://aws.amazon.com/lex" }}
+              sa_props={{ skill: "Cloud Technologies" }}
+            >
+              AWS Lex
+            </SkillsApplicationLink>
+            {" to suggest healthy foods based on user's intake"}
           </>
         ]}
       />
@@ -169,9 +186,12 @@ export default function ExperienceSection() {
         actions={[
           <>
             {"Set up Elastic Beanstalk, Lambda, S3, & other services on "}
-            <ForwardSkillsApplication skill="Cloud Technologies">
-              <Link href="https://aws.amazon.com">AWS</Link>
-            </ForwardSkillsApplication>
+            <SkillsApplicationLink
+              link_props={{ href: "https://aws.amazon.com" }}
+              sa_props={{ skill: "Cloud Technologies" }}
+            >
+              AWS
+            </SkillsApplicationLink>
           </>,
           <>Incorporated both Fulltext & Tag-based search</>
         ]}
