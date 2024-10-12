@@ -41,7 +41,7 @@ function App() {
               {"Digital Resume: "}
               <SkillsApplicationLink
                 link_props={{ href: "https://tmkhoa.netlify.app" }}
-                sa_props={{ skill: "Cloud Technologies" }}
+                sa_props={{ skill: "GitHub Actions" }}
               >
                 tmkhoa.netlify.app
               </SkillsApplicationLink>
@@ -49,8 +49,7 @@ function App() {
           </div>
         </address>
         <p className="mt-3 mx-auto raleway" id="objective">
-          To learn and apply new knowledge at the frontier of AI, in order to develop innovative
-          solutions for various industries and applications.
+          To master technologies, use them appropriately, & make them accessible to others.
         </p>
       </header>
       <Separator />

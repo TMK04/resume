@@ -13,7 +13,7 @@ export default function LnASection() {
             </td>
             <td id="brainhack-2023">
               <Link href="https://zindi.africa/competitions/brainhack-til-23-advanced-cv/leaderboard">
-                DSTA BrainHack 2023 (Today I Learned &#8212; AI Camp)
+                DSTA BrainHack 2023 (Today I Learned — AI Camp)
               </Link>
             </td>
           </tr>
@@ -47,11 +47,7 @@ export default function LnASection() {
           <tr>
             <th>2021</th>
             <td>Participation Award</td>
-            <td>
-              DSTA Brainhack 2021
-              <br />
-              Activity: Today I Learned – AI Camp
-            </td>
+            <td>DSTA Brainhack 2021 (Today I Learned — AI Camp)</td>
           </tr>
           <tr>
             <th>2020</th>

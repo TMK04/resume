@@ -9,6 +9,9 @@ export default function CertificationsSection() {
     <Section className="mb-2" h2_props={{ children: "Certifications" }}>
       <BulletList
         items={[
+          <CodecademyCertification href="810f53d14de24b938cc13c7c2af1e686">
+            Back-End Engineer
+          </CodecademyCertification>,
           <CodecademyCertification href="f4276e8c08a3ba174ef0147deb0c3013">
             Unit Testing
           </CodecademyCertification>,
@@ -20,7 +23,7 @@ export default function CertificationsSection() {
             link_props={{
               href: "https://learn.aisingapore.org/certificate-verification/81539CA35C-7EED902249-12D361128"
             }}
-            sa_props={{ skill: "Data Science & Machine Learning" }}
+            sa_props={{ skill: "Data Science & AI" }}
           >
             Literacy in AI
           </SkillsApplicationLink>,
@@ -58,7 +61,7 @@ export default function CertificationsSection() {
           />,
           <CodecademySkillsCertification
             link_props={{ href: "042a4e5884e3eb6ea1f2a12be6abb851" }}
-            sa_props={{ skill: "SQL" }}
+            sa_props={{ skill: "SQLite" }}
           />,
           <CodecademySkillsCertification
             link_props={{ href: "512386fdc7f6c934f98b01e6afa8285a" }}

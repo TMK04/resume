@@ -176,17 +176,17 @@ export function SkillsLink({ format, skill, skills: skills_prop }: SkillsLinkPro
   return (
     <SkillsApplication
       className="fw-bold"
-      onClick={() =>
-        Promise.allSettled(
-          Array.from(skills_set).map(async (skill) => {
-            const el = document.getElementById(skillId(skill));
-            if (el) {
-              el.focus();
-              tttSkill(el, el.classList.contains("fw-bold") ? [] : ["fw-bold"], 1500);
-            }
-          })
-        )
-      }
+      onClick={() => {
+        let focused = false;
+        for (const skill of skills_set) {
+          const el = document.getElementById(skillId(skill));
+          if (!focused && el) {
+            el.focus();
+            focused = true;
+            tttSkill(el, [], 1500);
+          }
+        }
+      }}
       skill={skill}
       skills={skills_prop}
     >
