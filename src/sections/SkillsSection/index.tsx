@@ -7,7 +7,7 @@ import Tooltip from "../../components/Tooltip";
 import Skill from "./Skill";
 
 function SkillsSubsectionDivider() {
-  return <hr className="my-0 border-light w-75" />;
+  return <hr className="my-0 border-light w-25" />;
 }
 
 export default function SkillsSection() {
@@ -23,7 +23,7 @@ export default function SkillsSection() {
         className: "align-items-center d-flex gap-2"
       }}
     >
-      <H5>Languages</H5>
+      <H5 className="text-decoration-underline">Languages</H5>
       <BulletList
         items={[
           <Skill skill="CSS" />,
@@ -44,7 +44,7 @@ export default function SkillsSection() {
           <Skill skill="UiPath" />
         ]}
       />
-      <Skill className="raleway fw-bold" skill="Data Science & AI" />
+      <Skill className="fw-bold raleway text-decoration-underline" skill="Data Science & AI" />
       <BulletList
         items={[
           <Skill skill="PyTorch" />,
@@ -69,8 +69,8 @@ export default function SkillsSection() {
         ]}
       />
       <SkillsSubsectionDivider />
-      <BulletList items={[<Skill skill="CRISP-DM" />]} />
-      <H5>Frontend</H5>
+      <BulletList items={[<Skill skill="CRISP-DM" />, <Skill skill="RAG" />]} />
+      <Skill className="fw-bold raleway text-decoration-underline" skill="Frontend" />
       <BulletList
         items={[
           <Skill skill="React" />,
@@ -90,7 +90,7 @@ export default function SkillsSection() {
       />
       <SkillsSubsectionDivider />
       <BulletList items={[<Skill skill="Responsive Design" />]} />
-      <H5>Backend</H5>
+      <Skill className="fw-bold raleway text-decoration-underline" skill="Backend" />
       <BulletList
         items={[
           <Skill skill="Express" />,
@@ -99,7 +99,7 @@ export default function SkillsSection() {
           <Skill skill="Flask" />
         ]}
       />
-      <H5>Database</H5>
+      <Skill className="fw-bold raleway text-decoration-underline" skill="Database" />
       <BulletList
         items={[
           <Skill skill="LanceDB" />,
@@ -113,7 +113,7 @@ export default function SkillsSection() {
           <Skill skill="SQLite" />
         ]}
       />
-      <H5>Deployment</H5>
+      <Skill className="fw-bold raleway text-decoration-underline" skill="Deployment" />
       <BulletList
         items={[
           <Skill skill="AWS" />,
@@ -125,7 +125,7 @@ export default function SkillsSection() {
           <Skill skill="ESLint" />
         ]}
       />
-      <H5>Design</H5>
+      <Skill className="fw-bold raleway text-decoration-underline" skill="Design" />
       <BulletList
         items={[
           <Skill skill="Figma" />,
@@ -134,7 +134,7 @@ export default function SkillsSection() {
           <Skill skill="Adobe Illustrator" />
         ]}
       />
-      <H5>Management</H5>
+      <Skill className="fw-bold raleway text-decoration-underline" skill="Management" />
       <BulletList
         items={[
           <Skill skill="Git" />,

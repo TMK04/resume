@@ -27,12 +27,16 @@ export type SubsectionProps = JSX.IntrinsicElements["section"] & {
 
 export function Subsection({
   children,
+  className,
   h3_props: { children: h3_children, description, className: h3_className, ...h3_props },
   ...props
 }: SubsectionProps) {
   return (
-    <section className={`mb-2${formatNonEmptyClassName(h3_className)}`} {...props}>
-      <H3 {...h3_props}>
+    <section className={`mb-2${formatNonEmptyClassName(className)}`} {...props}>
+      <H3
+        className={`text-decoration-underline${formatNonEmptyClassName(h3_className)}`}
+        {...h3_props}
+      >
         {h3_children}
         {description ? <H4 className="d-inline"> - {description}</H4> : <></>}
       </H3>

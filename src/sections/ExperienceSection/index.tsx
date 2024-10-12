@@ -1,11 +1,6 @@
 import Link from "../../components/Link";
 import { Section } from "../../components/Section";
-import {
-  ForwardSkillsApplication,
-  FrameworkLink,
-  SkillsApplicationLink,
-  SkillsLink
-} from "../SkillsSection/Skill";
+import { FrameworkLink, SkillsApplicationLink, SkillsLink } from "../SkillsSection/Skill";
 
 import Experience from "./Experience";
 
@@ -13,7 +8,7 @@ export default function ExperienceSection() {
   return (
     <Section
       h2_props={{
-        children: "Experience",
+        children: "Key Experience",
         className: "align-items-center d-flex gap-2"
       }}
     >
@@ -34,6 +29,7 @@ export default function ExperienceSection() {
           <FrameworkLink framework="Vue" frameworkable="TypeScript" />,
           <SkillsLink skill="Solidity" />,
           <SkillsLink skill="Postgres" />,
+          <SkillsLink skill="AWS" />,
           <SkillsLink skill="Docker" />,
           <SkillsLink skill="SSH" />,
           <SkillsLink skill="Chatbot" />,
@@ -48,18 +44,27 @@ export default function ExperienceSection() {
           <SkillsLink skill="Slack" />
         ]}
         time_props={{ children: "April - August 2024" }}
-        actions={[
-          <>
+      >
+        <ol className="mb-0">
+          <li>
+            {"Contributed to "}
+            <SkillsLink format={() => "official documentation"} skill="Handyman" />
+          </li>
+          <li>Tested a hardware wallet across different releases, browsers, & operating systems</li>
+          <li>
             {"Helped integrate a "}
             <SkillsLink skill="Chatbot" />
             {" into Telegram for users to interact with "}
             <SkillsLink format={() => "Smart Contracts"} skill="Solidity" />
-          </>,
-          "Tested a hardware wallet across different releases, browsers, & operating systems",
-          <>
+          </li>
+          <li>
             {"Worked on "}
             <Link href="https://portal.kaia.io">Kaia Portal</Link>
             <ul>
+              <li>
+                {"Implemented & adjusted designs from "}
+                <SkillsLink skill="Figma" />
+              </li>
               <li>
                 {"Took charge of "}
                 <SkillsLink skill="Responsive Design" />
@@ -67,31 +72,31 @@ export default function ExperienceSection() {
               </li>
               <li>Wrote unit & E2E tests</li>
             </ul>
-          </>,
-          <>
+          </li>
+        </ol>
+        <ul>
+          <li>
             {"Planned & executed tasks from "}
             <SkillsLink skill="Jira" />
             {", "}
             <SkillsLink skill="Confluence" />
             {", & "}
             <SkillsLink skill="Slack" />
-          </>,
-          <>
+          </li>
+          <li>
             {"Used "}
             <SkillsLink skill="Docker" />
             {" & "}
             <SkillsLink skill="SSH" />
             {" to ensure replicable builds & tests"}
-          </>,
-          <>
+          </li>
+          <li>
             {"Exchanged "}
-            <ForwardSkillsApplication skill="Handyman">
-              best practices, tools, & tips
-            </ForwardSkillsApplication>
+            <SkillsLink format={() => "best practices, tools, & tips"} skill="Handyman" />
             {" with colleagues"}
-          </>
-        ]}
-      />
+          </li>
+        </ul>
+      </Experience>
       <Experience
         h3_props={{ children: "Video Analytics for Major Project Pitching" }}
         skills={[
@@ -115,25 +120,34 @@ export default function ExperienceSection() {
           <SkillsLink skill="SSH" />
         ]}
         time_props={{ children: "June 2023 - March 2024" }}
-        actions={[
-          "Broke a vague problem statement into 8 models & 2 servers",
-          <>
-            Labelled &gt;2000 images & audio clips from past-year Major Project Pitches
+      >
+        <ul>
+          <li>
+            {"Labelled >2000 images & audio clips from past-year Major Project Pitches"}
             <ul>
               <li>Trained models every 200 records to ease labelling</li>
             </ul>
-          </>,
-          <>
+          </li>
+          <li>Prompted-engineered for feedback on areas of improvement</li>
+          <li>
             {"Fine-tuned hyperparameters using "}
             <SkillsLink skill="wandb" />
-          </>,
-          <>Achieved a variance of 1.3 marks/10 compared to human judge</>,
-          <>
+          </li>
+          <li>
+            {"Grades a "}
+            <em>5min</em>
+            {" video within "}
+            <em>1min</em>
+            {", with "}
+            <em>1.3 marks/10</em>
+            {" of variance compared to human judge"}
+          </li>
+          <li>
             {"Deployed onto school's server with "}
             <SkillsLink skill="Docker" /> & <SkillsLink skill="SSH" />
-          </>
-        ]}
-      />
+          </li>
+        </ul>
+      </Experience>
       <Experience
         h3_props={{
           children: (
@@ -148,6 +162,7 @@ export default function ExperienceSection() {
           <SkillsLink skill="styled-components" />,
           <SkillsLink skill="Solidity" />,
           <SkillsLink skill="Postgres" />,
+          <SkillsLink skill="AWS" />,
           <SkillsLink skill="Chatbot" />,
           <SkillsLink skill="Text Classification" />,
           <SkillsLink skill="PyTorch" />,
@@ -159,8 +174,9 @@ export default function ExperienceSection() {
           <SkillsLink skill="Slack" />
         ]}
         time_props={{ children: "September 2023 - February 2024" }}
-        actions={[
-          <>
+      >
+        <ol className="mb-0">
+          <li>
             {"Developed a Web3 game"}
             <ul>
               <li>
@@ -170,19 +186,32 @@ export default function ExperienceSection() {
                 <SkillsLink skill="Postgres" />
                 {" for fast querying"}
               </li>
+              <li>
+                {"Deployed onto "}
+                <SkillsLink format={() => "AWS EC2"} skill="AWS" />
+              </li>
             </ul>
-          </>,
-          <>
+          </li>
+          <li>
             {"Developed a "}
             <SkillsLink skill="Chatbot" />
             {" to onboard users onto a Web3 wallet"}
-          </>,
-          <>
+            <ul>
+              <li>
+                {"Prompt-engineered with "}
+                <SkillsLink skill="RAG" />
+                {" for relevant & professional responses"}
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <ul>
+          <li>
             {"Explained work using "}
             <SkillsLink skill="Confluence" />
-          </>
-        ]}
-      />
+          </li>
+        </ul>
+      </Experience>
       <Experience
         h3_props={{ children: "IoT Network Intrusion Detection" }}
         skills={[
@@ -191,21 +220,23 @@ export default function ExperienceSection() {
           <SkillsLink skill="wandb" />
         ]}
         time_props={{ children: "May - June 2023" }}
-        actions={[
-          <>
+      >
+        <ul>
+          <li>
             {"Fine-tuned hyperparameters using "}
             <SkillsLink skill="wandb" />
-          </>,
-          <>
+          </li>
+          <li>
+            {"Covered Attack & Defense strategies based on "}
+            <Link href="https://atlas.mitre.org">MITRE ATLAS</Link>
+          </li>
+          <li>
             {"Wrote a "}
             <Link href="https://api.wandb.ai/links/tmk04-team/uqbuj722">report</Link>
-            {
-              " explaining model training & evaluation, as well as Attack & Defense strategies based on "
-            }
-            <Link href="https://atlas.mitre.org">MITRE ATLAS</Link>
-          </>
-        ]}
-      />
+            {" detailing model training, evaluation, & strategies"}
+          </li>
+        </ul>
+      </Experience>
       <Experience
         h3_props={{
           children: (
@@ -221,8 +252,9 @@ export default function ExperienceSection() {
           <SkillsLink skill="IPynb" />
         ]}
         time_props={{ children: "May 2023" }}
-        actions={[
-          <>
+      >
+        <ul>
+          <li>
             {"Trained a "}
             <SkillsApplicationLink
               link_props={{ href: "https://github.com/ultralytics/ultralytics" }}
@@ -231,8 +263,8 @@ export default function ExperienceSection() {
               YOLO model
             </SkillsApplicationLink>
             {" to detect plushies from an image"}
-          </>,
-          <>
+          </li>
+          <li>
             {"Constructed a "}
             <SkillsApplicationLink
               link_props={{ href: "https://en.wikipedia.org/wiki/Siamese_neural_network" }}
@@ -256,20 +288,21 @@ export default function ExperienceSection() {
             >
               Triplet Loss
             </SkillsApplicationLink>
-          </>,
-          <>
+          </li>
+          <li>
             Passed detections from YOLO model into Siamese Network to identify "terrorist" plushies
-          </>,
-          <>
-            Trained an <SkillsLink skill="Automatic Speech Recognition" /> model to transcribe{" "}
+          </li>
+          <li>
+            Trained an <SkillsLink skill="Automatic Speech Recognition" />
+            {" model to transcribe "}
             <em>augmented</em> audio into text
-          </>,
-          <>
-            {"Hosted daily meetups among team of 5 to check progress & recommend "}
+          </li>
+          <li>
+            {"Hosted daily meetups to check progress & recommend "}
             <SkillsLink format={() => "information (sources)"} skill="Handyman" />
-          </>
-        ]}
-      />
+          </li>
+        </ul>
+      </Experience>
       <Experience
         h3_props={{
           children: (
@@ -286,8 +319,9 @@ export default function ExperienceSection() {
           <SkillsLink skill="Responsive Design" />
         ]}
         time_props={{ children: "January - March 2023" }}
-        actions={[
-          <>
+      >
+        <ul>
+          <li>
             {"Trained a "}
             <SkillsApplicationLink
               link_props={{ href: "https://en.wikipedia.org/wiki/Convolutional_neural_network" }}
@@ -296,13 +330,13 @@ export default function ExperienceSection() {
               CNN
             </SkillsApplicationLink>
             {" to identify food types"}
-          </>,
-          <>
+          </li>
+          <li>
             {"Developed a "}
             <SkillsLink format={() => "dashboard"} skill="React" />
             {" for users to track nutritional information"}
-          </>,
-          <>
+          </li>
+          <li>
             {"Created a "}
             <SkillsLink skill="Chatbot" />
             {" with "}
@@ -313,9 +347,9 @@ export default function ExperienceSection() {
               AWS Lex
             </SkillsApplicationLink>
             {" to suggest healthy foods based on user's intake"}
-          </>
-        ]}
-      />
+          </li>
+        </ul>
+      </Experience>
       <Experience
         h3_props={{
           children: (
@@ -332,27 +366,33 @@ export default function ExperienceSection() {
           <SkillsLink skill="Adobe XD" />
         ]}
         time_props={{ children: "April - November 2022" }}
-        actions={[
-          <>
-            Created & deployed a Web3-powered ecosystem featuring:
+      >
+        <ul>
+          <li>
+            {"Created & deployed a Web3-powered ecosystem featuring:"}
             <ol>
-              <li>An E-commerce Website</li>
-              <li>Walk-for-rewards App</li>
-              <li>Various Smart Contracts</li>
+              <li>
+                {"An E-commerce "}
+                <SkillsLink format={() => "Website"} skill="React" />
+              </li>
+              <li>
+                {"Walk-for-rewards "}
+                <SkillsLink format={() => "App"} skill="React Native" />
+              </li>
+              <li>
+                {"Various "}
+                <SkillsLink format={() => "Smart Contracts"} skill="Solidity" />
+              </li>
             </ol>
-          </>,
-          <>
+          </li>
+          <li>
             {"Partnered with "}
-            <Link
-              className="fw-bold"
-              href="https://www.klaytn.foundation"
-              style={{ color: "#33201A" }}
-            >
+            <Link className="fw-bold" href="https://www.klaytn.foundation">
               Klaytn
             </Link>
             {" & deployed on their Blockchain"}
-          </>,
-          <>
+          </li>
+          <li>
             {"Worked in a team of 6 using "}
             <SkillsLink skill="Git" />
             {", "}
@@ -362,39 +402,9 @@ export default function ExperienceSection() {
             {" to organize "}
             <SkillsLink format={() => "code, communication, & knowledge"} skill="Handyman" />
             {" respectively"}
-          </>
-        ]}
-      />
-      <Experience
-        h3_props={{
-          children: "Papa Yu's",
-          description: "Recipes Website"
-        }}
-        skills={[
-          <FrameworkLink framework="React" frameworkable="TypeScript" />,
-          <SkillsLink skill="HTML" />,
-          <SkillsLink skill="CSS" />,
-          <SkillsLink skill="MySQL" />,
-          <SkillsLink skill="Adobe XD" />
-        ]}
-        time_props={{ children: "April - August 2022" }}
-        actions={[
-          <>
-            {"Set up "}
-            <SkillsLink format={() => "Elastic Beanstalk"} skill="AWS" />
-            {", "}
-            <SkillsLink format={() => "Lambda"} skill="AWS" />
-            {", "}
-            <SkillsLink format={() => "S3"} skill="AWS" />
-            {", & other services"}
-          </>,
-          <>
-            {"Incorporated "}
-            <SkillsLink format={() => "Fulltext"} skill="MySQL" />
-            {" & Tag-based search"}
-          </>
-        ]}
-      />
+          </li>
+        </ul>
+      </Experience>
       <Experience
         h3_props={{
           children: (
@@ -404,22 +414,23 @@ export default function ExperienceSection() {
           ),
           description: "Research Automation Tool"
         }}
-        skills={[<SkillsLink skill="UiPath" />]}
+        skills={[<SkillsLink skill="UiPath" />, <SkillsLink skill="Text Summarization" />]}
         time_props={{ children: "April - August 2022" }}
-        actions={[
-          <>
+      >
+        <ul>
+          <li>
             {"Automated "}
             <SkillsLink format={() => "Keyword Extraction"} skill="Text Summarization" />
             {" & Outsourcing of References"}
-          </>,
-          <>
+          </li>
+          <li>
             {"Shortened time taken to gather resources from "}
             <em>several minutes</em>
             {" to "}
             <em>30 seconds</em>
-          </>
-        ]}
-      />
+          </li>
+        </ul>
+      </Experience>
     </Section>
   );
 }

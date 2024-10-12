@@ -159,7 +159,7 @@ export function SkillsApplicationLink({
 export function ForwardSkillsApplication({ children, ...props }: SkillsApplicationProps) {
   return (
     <SkillsApplication disabled {...props}>
-      <strong>{children}</strong>
+      {children}
     </SkillsApplication>
   );
 }

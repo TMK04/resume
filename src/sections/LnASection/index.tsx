@@ -8,6 +8,12 @@ export default function LnASection() {
         <tbody>
           <tr>
             <th>2023</th>
+            <td>Director's List</td>
+            <td>Temasek Polytechnic Diploma in Applied Artificial Intelligence</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
             <td>
               8<sup>th</sup>/31 teams in Computer Vision
             </td>
@@ -55,7 +61,7 @@ export default function LnASection() {
               Section Leader &<br />
               Service Award
             </td>
-            <td>Secondary School Choir</td>
+            <td>Dunman Secondary School Choir</td>
           </tr>
           <tr>
             <th>2017</th>
