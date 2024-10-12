@@ -9,8 +9,7 @@ export default function LnASection() {
           <tr>
             <th>2023</th>
             <td>Director's List</td>
-            <td>Temasek Polytechnic Diploma in Applied Artificial Intelligence</td>
-            <td></td>
+            <td>Temasek Polytechnic, Diploma in Applied Artificial Intelligence</td>
           </tr>
           <tr>
             <th></th>

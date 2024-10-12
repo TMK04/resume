@@ -16,7 +16,9 @@ export default function ExperienceSection() {
         h3_props={{
           children: (
             <>
-              <Link className="text-accent">Kaia Foundation</Link>
+              <Link className="text-accent" href="https://www.kaia.io">
+                Kaia Foundation
+              </Link>
               {", Junior Software Developer"}
             </>
           )
@@ -152,7 +154,9 @@ export default function ExperienceSection() {
         h3_props={{
           children: (
             <>
-              <Link className="text-accent">Krust Universe</Link>
+              <Link className="text-accent" href="https://krustuniverse.com">
+                Krust Universe
+              </Link>
               {", Intern"}
             </>
           )
