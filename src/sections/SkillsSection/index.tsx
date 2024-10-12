@@ -62,6 +62,7 @@ export default function SkillsSection() {
           <Skill skill="Object Detection" />,
           <Skill skill="Re-identification" />,
           <Skill skill="Natural Language Processing" />,
+          <Skill skill="Chatbot" />,
           <Skill skill="Text Summarization" />,
           <Skill skill="Text Classification" />,
           <Skill skill="Automatic Speech Recognition" />

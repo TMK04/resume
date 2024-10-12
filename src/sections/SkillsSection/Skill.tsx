@@ -180,10 +180,12 @@ export function SkillsLink({ format, skill, skills: skills_prop }: SkillsLinkPro
         let focused = false;
         for (const skill of skills_set) {
           const el = document.getElementById(skillId(skill));
-          if (!focused && el) {
-            el.focus();
-            focused = true;
+          if (el) {
+            if (!focused) {
+              el.focus();
+            }
             tttSkill(el, [], 1500);
+            focused = true;
           }
         }
       }}
